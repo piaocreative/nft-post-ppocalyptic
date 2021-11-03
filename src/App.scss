@@ -1,0 +1,324 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@700&display=swap');
+
+.App {
+    overflow-x: hidden;
+}
+
+// header
+header {
+    padding: 2.5rem 0;
+}
+
+.navbar-nav {
+    .nav-link {
+        font-size: 16px;
+        font-weight: 500;
+        color: #ffffff;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+}
+
+button {
+    font-family: 'Luckiest Guy', cursive;
+    padding: 20px 68px;
+    color: #ffffff;
+    font-size: 21px;
+    border: none;
+    background-image: repeating-linear-gradient(180deg, #FEA715, #FA7D00 100%);
+    white-space: nowrap;
+}
+
+.connectWallet {
+    margin-left: 12rem;
+    color: #FEA715;
+    white-space: nowrap;
+}
+
+.banner {
+    position: relative;
+    padding: 14.875rem 0;
+
+    .title {
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 13.25rem !important;
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 2.25rem !important;
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: 90px;
+            text-align: left;
+        }
+    }
+
+    .sub-title {
+        @include media-breakpoint-up(lg) {
+            margin-right: 16rem;
+        } 
+    }
+    
+    .social-link {
+        li {
+            list-style: none;
+
+            a {
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                font-family: 'Luckiest Guy', cursive;
+                color: #ffffff;
+
+                img {
+                    margin-right: 0.875rem;
+                }
+            }
+        }
+    }
+
+    .banner-thumbnail {
+        display: flex;
+        position: absolute;
+        top: -23rem;
+        left: -5rem;
+        z-index: -1;
+
+        img {
+            max-width: 100%;
+        }
+
+        &:after, &:before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            vertical-align: middle;
+            width: 98%;
+            height: 1px;
+            top: 60%;
+            background-color: #ffffff;
+            z-index: -1;
+        }
+
+        &:before {
+            left: -50%;
+            opacity: 0.3;
+        }
+
+        &:after {
+            right: -80%;
+            height: 3px;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        padding: 5.875rem 0;
+
+        .banner-thumbnail {
+            top: -13rem;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .sub-title {
+            font-size: 40px !important;
+        }
+
+        .title {
+            font-size: 72px !important;
+        }
+    }
+}
+
+// product//
+.product {
+    padding: 1rem;
+
+    img {
+        width: 100%;
+    }
+}
+
+// about//
+.about-section {
+    position: relative;
+    padding: 197px 0;
+
+    .about-bg {
+        position: absolute;
+        left: 9%;
+        top: 50%;
+    }
+
+    .title {
+        margin-bottom: 6.875rem !important;
+    }
+
+    img {
+        margin-bottom: 6rem;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: -5rem;
+            margin-left: -5rem;
+        }
+
+        @include media-breakpoint-down(lg) {
+            max-width: 100%;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        padding: 50px 0;
+
+        .title {
+            margin-bottom: 1.875rem !important;
+        }
+    }
+}
+
+.story {
+    padding: 6rem 0;
+    border-bottom: 1px solid rgba(40, 43, 47, 0.6);
+    position: relative;
+
+    .number {
+        font-family: 'Orbitron', sans-serif;
+        color: #FEA715;
+    }
+
+    h2 {
+        color: rgba($color: #ffffff, $alpha: 0.2);
+    }
+
+    @include media-breakpoint-down(lg) {
+        padding: 3.5rem 0;
+
+        h2 {
+            margin-bottom: 3rem !important;
+        }
+    }
+}
+
+// teams //
+.teams {
+    position: relative;
+    padding: 11.25rem 0;
+
+    .row {
+        --bs-gutter-x: 6.25rem;
+    }
+
+    .team {
+        margin-bottom: 1.875rem;
+
+        img {
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        h4 {
+            margin-bottom: 15px !important;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        padding: 5rem 0;
+    }
+}
+
+//community//
+.community {
+    padding-top: 4rem;
+
+    img {
+        @include media-breakpoint-down(lg) {
+            max-width: 100%;
+            padding-top: 3rem;
+        }
+    }
+}
+
+// Footer //
+footer {
+    padding: 6rem 0;
+
+    ul {
+        li {
+            list-style: none;
+        }
+    }
+
+    .footer-links {
+        li {
+            list-style: none;
+            margin-bottom: 1rem;
+
+            a {
+                font-size: 16px;
+                font-weight: 500;
+                color: #ffffff;
+            }
+        }
+    }
+
+    .social {
+        li {
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 2.5rem;
+                height: 2.5rem;
+                background-color: rgba($color: #282B2F, $alpha: 0.5);
+                transform: rotate(45deg);
+
+                img {
+                    transform: rotate(315deg);
+                }
+            }
+        }
+    }
+
+    p {
+    font-size: 16px;
+    color: #282B2F;
+    }
+}
+
+
+.wrapper {
+    position: absolute;
+    top: 13rem;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
+  }
+  
+  .timeline {
+    height: 475px;
+    width: 3px;
+    background-color: #282B2F;
+  }
+  
+  .square {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #282B2F;
+    width: 16px;
+    height: 16px;
+    z-index: 1;
+    transform: rotate(45deg) !important;
+  }
+  
+  .squareWrapper {
+    position: relative;
+    margin-bottom: -1rem;
+  }

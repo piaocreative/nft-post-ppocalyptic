@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0A0F1A !important;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Luckiest Guy', cursive;
+  margin-bottom: 0 !important;
+}
+
+
+a, p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 148.7px;
+}
+
+h2 {
+  font-size: 72px;
+  line-height: 93.6px;
+}
+
+@media (max-width: 760px) {
+  h2 {
+    font-size:48px;
+    line-height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size:35px;
+  }
+}
+
+
+h3 {
+  font-size: 48px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 40.8px;
+}
+
+h6 {
+  font-size: 18px;
+  color: #FEA715;
+}
+
+p {
+  font-size: 17px;
+  line-height: 28.9px;
+  color: #ffffff;
+  margin-bottom: 42px;
+}
