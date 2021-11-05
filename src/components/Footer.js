@@ -3,12 +3,12 @@ import { BrowserRouter as Router,  Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <footer>
+        <Router>
+            <footer>
 
-            <div className="container">
-                <div className="d-md-flex justify-content-between align-items-center">
-                    <div>
-                        <Router>     
+                <div className="container">
+                    <div className="d-md-flex justify-content-between align-items-center">
+                        <div>
                             <ul className="footer-links text-center text-md-start p-0">
                                 <li>
                                     <Link to="/"> 
@@ -31,16 +31,19 @@ const Footer = () => {
                                     </Link>    
                                 </li>   
                             </ul>          
-                        </Router>
-                    </div>
+                        </div>
 
-                    <h4 className="text-white text-center text-ms-start my-4 my-md-0">Saler.</h4>
+                        <div className="navbar-brand d-flex gap-3 align-items-center m-0">
+                            <Link to="/">
+                                <img src="./logo.png" />
+                            </Link>
+                            <h4 className="text-white">Saler.</h4>
+                        </div>
 
-                    <div className="text-center text-lg-end">
-                        <h6 className="mb-5">SEE ON OPENSEA </h6>
+                        <div className="text-center text-lg-end">
+                            <h6 className="mb-5">SEE ON OPENSEA </h6>
 
-                        <ul className="social d-flex gap-4 mb-4 justify-content-center justify-content-md-end p-0">
-                            <Router>
+                            <ul className="social d-flex gap-4 mb-4 justify-content-center justify-content-md-end p-0">
                                 <li>
                                     <Link to="/">
                                         <img src="./twitter.svg" />
@@ -51,18 +54,18 @@ const Footer = () => {
                                         <img src="./discord.svg" />
                                     </Link>
                                 </li>
-                            </Router>
-                        </ul>
+                            </ul>
 
-                        <p className="mb-0">Copyrights</p>
+                            <p className="mb-0">Copyrights</p>
 
+                        </div>
+                        
                     </div>
-                    
+
                 </div>
 
-            </div>
-
-        </footer>
+            </footer>
+        </Router>
     );
 }
 

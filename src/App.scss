@@ -7,7 +7,7 @@
 
 // header
 header {
-    padding: 2.5rem 0;
+    padding: 0.5rem 0;
 }
 
 .navbar-nav {
@@ -17,6 +17,12 @@ header {
         color: #ffffff;
         padding-left: 25px !important;
         padding-right: 25px !important;
+    }
+}
+
+.navbar-brand {
+    img {
+        height: 82px;
     }
 }
 

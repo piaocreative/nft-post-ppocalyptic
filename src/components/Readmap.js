@@ -1,5 +1,5 @@
-import React, {useRef, useState, useEffect} from 'react';
-import TimelineObserver from "react-timeline-animation";
+import React, {useRef, useEffect} from 'react';
+import TimelineObserver from "./timeline/index";
 
 
 const Timeline = ({ setObserver, callback }) => {
@@ -175,15 +175,15 @@ export const Readmap = () => {
                 </div>
 
                 <TimelineObserver
-                initialColor="#282B2F"
-                fillColor="#FEA715"
-                handleObserve={(setObserver) => (
-                    <Timeline
-                        className="timeline"
-                        setObserver={setObserver}
-                    />
-                )}
-            />
+                    initialColor="#282B2F"
+                    fillColor="#FEA715"
+                    handleObserve={(setObserver) => (
+                        <Timeline
+                            className="timeline"
+                            setObserver={setObserver}
+                        />
+                    )}
+                />
 
             </div>
         </div>

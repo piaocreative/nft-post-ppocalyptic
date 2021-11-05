@@ -3,7 +3,8 @@ import { BrowserRouter as Router,  Link } from "react-router-dom";
 
 import { useWeb3React } from "@web3-react/core"
 import { injected } from "./connectors"
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 const Header = () => {
     const { active, account, library, connector, activate, deactivate } = useWeb3React()
   
@@ -28,12 +29,15 @@ const Header = () => {
             <header>
                 <div className="container">
                 <nav className="navbar navbar-expand-lg">
-                    <div className="navbar-brand">
+                    <div className="navbar-brand d-flex gap-3 align-items-center">
+                        <Link to="/">
+                            <img src="./logo.png" />
+                        </Link>
                         <h4 className="text-white">Saler.</h4>
                     </div>
 
                     <button className="navbar-toggler btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                        <FontAwesomeIcon className="text-white" icon={faBars} />
                     </button>
 
                     <div className="collapse navbar-collapse justify-content-end" id="navBar">
@@ -56,7 +60,7 @@ const Header = () => {
                             </Link> 
                         </div>
 
-                        {active ? <Link to="/" onClick={disconnect}><h4 className="connectWallet">Disconnect</h4></Link> : <Link to="/" onClick={connect}><h4 className="connectWallet">Connect</h4></Link>}
+                        {active ? <Link to="/" onClick={disconnect}><h4 className="connectWallet">Disconnect</h4></Link> : <Link to="/" onClick={connect}><h4 className="connectWallet">Wallet Connect</h4></Link>}
 
                     </div>
                     </nav>
