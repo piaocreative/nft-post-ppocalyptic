@@ -3,29 +3,43 @@ import Light from "./Light";
 
 const Teams = () => {
     return (
-        <div className="teams">
+        <div id="team" className="teams">
             <div className="container">
                 <h2 className="text-white mb-5">Meet the team</h2>
                 <div className="row">
-                    <div className="col-lg-4">
+                    <div className="col-lg">
                         <div className="team">
-                            <img src="./team/team.png" />
-                            <h4 className="text-white"> H. Rackham</h4>
+                            <img src="./team/team.jpg" />
+                            <h4 className="text-white"> Kiran N.</h4>
                             <p className="mb-0">Director</p>
                         </div>
                     </div>
-                    <div className="col-lg-4">
+                    <div className="col-lg">
                         <div className="team">
-                            <img src="./team/team.png" />
-                            <h4 className="text-white"> H. Rackham</h4>
-                            <p className="mb-0">Director</p>
+                            <img src="./story/story4.jpg" />
+                            <h4 className="text-white"> Kabita L.</h4>
+                            <p className="mb-0">Marketing Manager</p>
                         </div>
                     </div>
-                    <div className="col-lg-4">
+                    <div className="col-lg">
                         <div className="team">
-                            <img src="./team/team.png" />
-                            <h4 className="text-white"> H. Rackham</h4>
-                            <p className="mb-0">Director</p>
+                            <img src="./story/story3.jpg" />
+                            <h4 className="text-white">Svetlana G.</h4>
+                            <p className="mb-0">Design Team Manager</p>
+                        </div>
+                    </div>
+                    <div className="col-lg">
+                        <div className="team">
+                            <img src="./story/story1.jpg" />
+                            <h4 className="text-white"> Evgenia O.</h4>
+                            <p className="mb-0">Artist</p>
+                        </div>
+                    </div>
+                    <div className="col-lg">
+                        <div className="team">
+                            <img src="./story/story2.jpg" />
+                            <h4 className="text-white">Nikita K.</h4>
+                            <p className="mb-0">Artist</p>
                         </div>
                     </div>
                 </div>

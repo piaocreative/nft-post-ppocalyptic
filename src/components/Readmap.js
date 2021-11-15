@@ -78,12 +78,12 @@ const Timeline = ({ setObserver, callback }) => {
 
 export const Readmap = () => {
     return (
-        <div className="container">
+        <div id="roadmap" className="container">
             <div className="row">   
                 <div className="col-lg-6">
-                    <h2 className="text-white">Roadmap</h2>
+                    <h2 className="text-white mb-4">Roadmap</h2>
                 </div>
-                <div className="col-lg-5 offset-lg-1">
+                <div className="col-lg-7">
                     <p className="mt-3">We have a lot of ideas that make the customer the hero of our story. We love solving problems and exceeding your expectations. We will work hard with our community to make Discord and Twitter even cooler throughout time.</p>
                 </div>
             </div>
@@ -94,10 +94,10 @@ export const Readmap = () => {
                     <p className="number mb-3">01</p>
                     <div className="row">
                         <div className="col-lg-6">
-                            <h2>What is Lorem Ipsum?</h2>
+                            <h2>Community Wallet</h2>
                         </div>
                         <div className="col-lg-5 offset-lg-1">
-                            <p className="mt-3 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing </p>
+                            <p className="mt-3 mb-0">When our collection is sold out, we will create and start the community wallet with 10 ETH. This wallet will be used for further donations, investments and promotions as voted on by the community. We will also reward our most active and helpful community members based on our discord ranking system.</p>
                         </div>
                     </div>
                 </div>
@@ -106,10 +106,13 @@ export const Readmap = () => {
                     <p className="number mb-3">02</p>
                     <div className="row">
                         <div className="col-lg-6">
-                            <h2>Where does it come from?</h2>
+                            <h2>Golems <br />Merch</h2>
                         </div>
                         <div className="col-lg-5 offset-lg-1">
-                            <p className="mt-3 mb-0">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. </p>
+                            <p className="mt-3 mb-0"
+                                >Ellis and his Bounty Hunters begin their journey and pass through the Zone of Desolation, which is populated by the Golems, a tribe with 2000 Armored Warriors. Ellis and his Bounty Hunters are confronted by a group of Golem Armored Warriors and a standoff ensues.
+                                We have special Golems Merch reserved for 20 lucky wallet owners. When 2000 NFTs are sold out, we will share 10% of mint sales to 20 lucky wallet owners.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -118,10 +121,13 @@ export const Readmap = () => {
                     <p className="number mb-3">03</p>
                     <div className="row">
                         <div className="col-lg-6">
-                            <h2>Why do we <br />use it?</h2>
+                            <h2>Kesseks <br />Merch</h2>
                         </div>
                         <div className="col-lg-5 offset-lg-1">
-                            <p className="mt-3 mb-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                            <p className="mt-3 mb-0">
+                                Some of the Bounty Hunters stay in Anatef while Ellis and the others go on a reconnaissance mission to spy on the protected base of the Kesseks and their 3000 Armored Warriors. The Bounty Hunters destroy one of the Kesseks' ammunition dumps and are chased.
+                                We have special Kesseks Merch reserved for 30 lucky wallet owners. When new 3000 NFTs are sold out, we will share 15% of mint sales to 30 lucky wallet owners.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -130,10 +136,13 @@ export const Readmap = () => {
                     <p className="number mb-3">04</p>
                     <div className="row">
                         <div className="col-lg-6">
-                            <h2>Where can I get some?</h2>
+                            <h2>Mondrils <br />Merch</h2>
                         </div>
                         <div className="col-lg-5 offset-lg-1">
-                            <p className="mt-3 mb-0">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.  </p>
+                            <p className="mt-3 mb-0">
+                                Ellis wakes up in the Blue Quadrant base of the Mondrils, another tribe with 5000 Armored Warriors led by none other than Gilhem. Gilhem had received knowledge of Ellis' bounty hunter gang from Andres—to help them capture Ellis for leverage against the Kesseks.
+                                We have special Mondrils Merch reserved for 50 lucky wallet owners. When new 5000 NFTs are sold out, we will share 20% of mint sales to 50 lucky wallet owners.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -142,10 +151,12 @@ export const Readmap = () => {
                     <p className="number mb-3">05</p>
                     <div className="row">
                         <div className="col-lg-6">
-                            <h2>What is Lorem Ipsum?</h2>
+                            <h2>9 Hunter's <br />Drop</h2>
                         </div>
                         <div className="col-lg-5 offset-lg-1">
-                            <p className="mt-3 mb-0">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. </p>
+                            <p className="mt-3 mb-0">
+                                There are special NFT products with portraits of 9 Hunters. When our collection is sold out, we will send them free to best 9 collectors of special Warriors.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -154,10 +165,10 @@ export const Readmap = () => {
                     <p className="number mb-3">06</p>
                     <div className="row">
                         <div className="col-lg-6">
-                            <h2>Where does it come from?</h2>
+                            <h2>Ellis and <br />Bohler's Drop</h2>
                         </div>
                         <div className="col-lg-5 offset-lg-1">
-                            <p className="mt-3 mb-0">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. </p>
+                            <p className="mt-3 mb-0">There are special NFT products with portraits of Ellis and Bohler. When our collection is sold out, we will send Ellis's portrait and 5ETH to the best collector of Hunters. Also, we will send Bohler's portrait and 5ETH to our most active and helpful community member.</p>
                         </div>
                     </div>
                 </div>
@@ -166,10 +177,10 @@ export const Readmap = () => {
                     <p className="number mb-3">07</p>
                     <div className="row">
                         <div className="col-lg-6">
-                            <h2>Why do we <br />use it?</h2>
+                            <h2>Blockchain<br />Game</h2>
                         </div>
                         <div className="col-lg-5 offset-lg-1">
-                            <p className="mt-3 mb-0">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. </p>
+                            <p className="mt-3 mb-0">We are planning to publish the blockchain game with  Only NFT owners can join to the game. It will be coming soon…! Enjoy it!</p>
                         </div>
                     </div>
                 </div>

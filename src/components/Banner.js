@@ -1,16 +1,24 @@
 import React from 'react';
 import { BrowserRouter as Router,  Link } from "react-router-dom";
-import Light from "./Light";
+import { format } from 'date-fns';
 
 const Banner = () => {
+    let date = format(new Date(), 'yyyy-MM-dd');
+
     return(
-        <div className="banner">
+        <div className="banner" style={{ backgroundImage: `url(./homebanner.png)` }}>
             <div className="container position-relative">
                 <h3 className="text-white text-lg-end sub-title">Welcome to the</h3>
-                <h1 className="title">Finibus-Bonorum</h1>
+                <h1 className="title">Post-Apocalyptic</h1>
 
                 <div className="row">
-                    <div className="col-lg-6 offset-lg-3 offset-xxl-6">
+                    <div className="col-lg-5">
+                        <div className="ntf-info">
+                            <h2 className="text-white"> {date} </h2>
+                            <p>0 NTFS Sold <span className="ms-3">10,000 NFTs available</span></p>
+                        </div>
+                    </div>
+                    <div className="col-lg-6 offset-xl-1">
                         <p  style={{ marginBottom: 95 }}>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
                         <div className="d-md-flex align-items-center justify-content-between text-center">
                             <button className="mb-5 mb-md-0">See on opnesea</button>
@@ -34,37 +42,9 @@ const Banner = () => {
                         </div>
                     </div>
                 </div>
-                <div className="banner-thumbnail">
-                    <img src="./banner.png" />
-                </div>
             </div>
 
-            <Light
-                url="./lights/light1.png"
-                left="auto"
-                right={-15}
-                top={-160}
-                bottom="auto"
-                index={-1}
-            />
-
-            <Light
-                url="./lights/light2.png"
-                left={5}
-                right="auto"
-                top={-145}
-                bottom="auto"
-                index={-10}
-            />
-
-            <Light
-                url="./lights/light3.png"
-                left={-30}
-                right="auto"
-                top="auto"
-                bottom={-885}
-                index={-1}
-            />
+            <div className="divide"></div>
         </div>
     );
 }

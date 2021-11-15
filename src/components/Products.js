@@ -8,6 +8,8 @@ const Products = () => {
         arrows:false,
         infinite: true,
         speed: 500,
+        autoplay: true,
+        autoplaySpeed: 2500,
         slidesToShow: 6,
         slidesToScroll: 1,
         responsive: [
@@ -55,52 +57,96 @@ const Products = () => {
     };
 
     return(
-        <Router>
-             <Slider {...settings}>
-                <div className="product">
-                    <Link to="/">
-                        <img src="./products/product1.png" />
-                    </Link>
-                </div>
+        <div id="gallery">
+            <Router>
+                <Slider {...settings}>
+                    <div className="product">
+                        <Link to="/">
+                            <img src="./products/product1.png" />
+                        </Link>
+                    </div>
 
-                <div className="product">
-                    <Link to="/">
-                        <img src="./products/product2.png" />
-                    </Link>
-                </div>
+                    <div className="product">
+                        <Link to="/">
+                            <img src="./products/product2.png" />
+                        </Link>
+                    </div>
 
-                <div className="product"> 
-                    <Link to="/">
-                        <img src="./products/product3.png" />
-                    </Link>
-                </div>
+                    <div className="product"> 
+                        <Link to="/">
+                            <img src="./products/product3.png" />
+                        </Link>
+                    </div>
 
-                <div className="product">
-                    <Link to="/">
-                        <img src="./products/product4.png" />
-                    </Link>
-                </div>
+                    <div className="product">
+                        <Link to="/">
+                            <img src="./products/product4.png" />
+                        </Link>
+                    </div>
 
-                <div className="product">
-                    <Link to="/">
-                        <img src="./products/product5.png" />
-                    </Link>
-                </div>
+                    <div className="product">
+                        <Link to="/">
+                            <img src="./products/product5.png" />
+                        </Link>
+                    </div>
 
-                <div className="product">
-                    <Link to="/">
-                        <img src="./products/product6.png" />
-                    </Link>
-                </div>
+                    <div className="product">
+                        <Link to="/">
+                            <img src="./products/product6.png" />
+                        </Link>
+                    </div>
 
-                <div className="product">
-                    <Link to="/">
-                        <img src="./products/product1.png" />
-                    </Link>
-                </div>
+                    <div className="product">
+                        <Link to="/">
+                            <img src="./products/product7.png" />
+                        </Link>
+                    </div>
 
-            </Slider >
-        </Router>
+                    <div className="product">
+                        <Link to="/">
+                            <img src="./products/product8.png" />
+                        </Link>
+                    </div>
+
+                    <div className="product">
+                        <Link to="/">
+                            <img src="./products/product9.png" />
+                        </Link>
+                    </div>
+
+                    <div className="product">
+                        <Link to="/">
+                            <img src="./products/product10.png" />
+                        </Link>
+                    </div>
+
+                    <div className="product">
+                        <Link to="/">
+                            <img src="./products/product11.png" />
+                        </Link>
+                    </div>
+
+                    <div className="product">
+                        <Link to="/">
+                            <img src="./products/product12.png" />
+                        </Link>
+                    </div>
+
+                    <div className="product">
+                        <Link to="/">
+                            <img src="./products/product13.png" />
+                        </Link>
+                    </div>
+
+                    <div className="product">
+                        <Link to="/">
+                            <img src="./products/product14.png" />
+                        </Link>
+                    </div>
+
+                </Slider >
+            </Router>
+        </div>
     );
 }
 

@@ -7,6 +7,8 @@
 
 // header
 header {
+    position: relative;
+    z-index: 1;
     padding: 0.5rem 0;
 }
 
@@ -17,6 +19,7 @@ header {
         color: #ffffff;
         padding-left: 25px !important;
         padding-right: 25px !important;
+        cursor: pointer;
     }
 }
 
@@ -44,12 +47,25 @@ button {
 
 .banner {
     position: relative;
+    top: -8rem;
     padding: 14.875rem 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -10rem;
+        width: 100%;
+        height: 10rem;
+        background-image: linear-gradient(179deg, black, transparent);
+    }
 
     .title {
         color: #ffffff;
         text-align: center;
-        margin-bottom: 13.25rem !important;
+        margin-bottom: 12.25rem !important;
 
         @include media-breakpoint-down(lg) {
             margin-bottom: 2.25rem !important;
@@ -119,6 +135,22 @@ button {
         }
     }
 
+    .ntf-info {
+        h2 {
+            padding-bottom: 1rem;
+            border-bottom: 1px dotted #ffffff;
+            
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 7rem !important;
+            }
+        }
+
+        p {
+            padding: 1rem 0;
+            font-size: 30px;
+        }
+    }
+
     @include media-breakpoint-down(lg) {
         padding: 5.875rem 0;
 
@@ -138,6 +170,30 @@ button {
     }
 }
 
+.divide {
+    position: absolute;
+    top: 47%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 51%;
+        height: 1px;
+        background-color: rgba($color: #ffffff, $alpha: 0.7);
+    }
+
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 49%;
+        height: 3px;
+        background-color: #ffffff;
+    }
+}
+
 // product//
 .product {
     padding: 1rem;
@@ -150,12 +206,12 @@ button {
 // about//
 .about-section {
     position: relative;
-    padding: 197px 0;
+    padding: 165px 0;
 
     .about-bg {
         position: absolute;
-        left: 9%;
-        top: 50%;
+        left: 3%;
+        top: 20%;
     }
 
     .title {
@@ -164,15 +220,6 @@ button {
 
     img {
         margin-bottom: 6rem;
-
-        @include media-breakpoint-up(lg) {
-            margin-top: -5rem;
-            margin-left: -5rem;
-        }
-
-        @include media-breakpoint-down(lg) {
-            max-width: 100%;
-        }
     }
 
     @include media-breakpoint-down(lg) {
@@ -212,10 +259,6 @@ button {
     position: relative;
     padding: 11.25rem 0;
 
-    .row {
-        --bs-gutter-x: 6.25rem;
-    }
-
     .team {
         margin-bottom: 1.875rem;
 
@@ -236,12 +279,12 @@ button {
 
 //community//
 .community {
-    padding-top: 4rem;
+    padding: 7rem 0;
 
     img {
         @include media-breakpoint-down(lg) {
             max-width: 100%;
-            padding-top: 3rem;
+            padding: 3rem 0;
         }
     }
 }
@@ -256,6 +299,12 @@ footer {
         }
     }
 
+    .navbar-brand {
+        @include media-breakpoint-up(lg) {
+            margin-left: 11rem;
+        }
+    }
+
     .footer-links {
         li {
             list-style: none;
@@ -264,7 +313,8 @@ footer {
             a {
                 font-size: 16px;
                 font-weight: 500;
-                color: #ffffff;
+                color: #ffffff !important;
+                cursor: pointer;
             }
         }
     }
@@ -288,8 +338,8 @@ footer {
     }
 
     p {
-    font-size: 16px;
-    color: #282B2F;
+        font-size: 16px;
+        color: #ffffff;
     }
 }
 
@@ -308,7 +358,7 @@ footer {
   }
   
   .timeline {
-    height: 475px;
+    height: 430px;
     width: 3px;
     background-color: #282B2F;
   }

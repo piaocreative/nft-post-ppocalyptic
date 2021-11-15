@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router,  Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import {Link} from 'react-scroll'
 
 const Footer = () => {
     return (
@@ -11,33 +12,32 @@ const Footer = () => {
                         <div>
                             <ul className="footer-links text-center text-md-start p-0">
                                 <li>
-                                    <Link to="/"> 
+                                    <Link to="gallery" spy={true} smooth={true}> 
                                         Gallery
                                     </Link>    
                                 </li>  
                                 <li>
-                                    <Link to="/"> 
+                                    <Link to="story" spy={true} smooth={true}> 
                                         Story
                                     </Link>    
                                 </li> 
                                 <li>
-                                    <Link to="/"> 
+                                    <Link to="roadmap" spy={true} smooth={true}> 
                                         Roadmap
                                     </Link>    
                                 </li> 
                                 <li>
-                                    <Link to="/"> 
+                                    <Link to="team" spy={true} smooth={true}> 
                                         Team
                                     </Link>    
                                 </li>   
                             </ul>          
                         </div>
 
-                        <div className="navbar-brand d-flex gap-3 align-items-center m-0">
+                        <div className="navbar-brand mb-0">
                             <Link to="/">
                                 <img src="./logo.png" />
                             </Link>
-                            <h4 className="text-white">Saler.</h4>
                         </div>
 
                         <div className="text-center text-lg-end">
@@ -56,7 +56,7 @@ const Footer = () => {
                                 </li>
                             </ul>
 
-                            <p className="mb-0">Copyrights</p>
+                            <p className="mb-0">Copyright 2021. The Post-Apocalyptic.</p>
 
                         </div>
                         

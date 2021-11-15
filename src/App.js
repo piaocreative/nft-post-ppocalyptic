@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Web3ReactProvider } from '@web3-react/core'
 import Web3 from 'web3'
 
@@ -23,6 +23,41 @@ function getLibrary(provider) {
 
 function App() {
 
+  const [image, setImage] = useState("./story/story1.jpg")
+
+  const images = [
+    "./story/story1.jpg",
+    "./story/story2.jpg",
+    "./story/story3.jpg",
+    "./story/story4.jpg",
+    "./story/story5.jpg",
+    "./story/story6.jpg",
+    "./story/story7.jpg",
+    "./story/story8.jpg",
+    "./story/story9.jpg",
+    "./story/story10.jpg",
+    "./story/story11.jpg",
+  ];
+  let random;
+  let imageNum;
+  function changeImage () {
+    random = Math.random();
+    imageNum = parseInt(random*11);
+
+    if(image===images[imageNum]) {
+      changeImage();
+    }else {
+      setImage(images[imageNum]);
+    }
+  }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      changeImage()
+    }, 500);
+    return () => clearInterval(interval);
+  });
+
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
       <div className="App">
@@ -33,16 +68,14 @@ function App() {
 
         <Products />
 
-        <div className="about-section">
+        <div id="story" className="about-section">
           <div className="container">
+            <h2 className="text-white title">The Post-Apocalyptic</h2>
             <div className="row">
               <div className="col-lg-6 position-relative">
-                <h2 className="text-white title">1914 translation by H. Rackham</h2>
                 <div className="col-lg-10">
-                  <h5 className="text-white mb-4">Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h5>
-                  <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. </p>
-                  <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
-                  <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstance</p>
+                  <p>The Post-Apocalyptic
+                    The future: maybe a long time off, maybe sooner than you think. The landscape of this arid post-apocalyptic world has been divided into different quadrants where 10,000 Armored Warriors battle each other for survival. Within these 10,000 Armored Warriors, there are a limited number of military personnel trying to maintain order against different organized factions who are fighting each other—and anyone who stands in their way—for supplies, for territory, and just for kicks. These factions include the Kesseks, the Mondrils, and the Golems. (Oh, and did we mention the atomic-mutated dragons who can strike without warning? Because that’s what you also have in a post-apocalyptic world.) In the middle of all this: Ellis Ulton, a battle-scarred Bounty Hunter who is just trying to make a living as he navigates between the military personnel he once belonged to and the Kesseks, the Mondrils, and the Golems who really call the shots now. Ellis is reluctantly hired for a job which will force him to come up against the dreaded Kesseks, the most vicious faction within the 10,000 Armored Warriors. So he brings together his own team of nine Bounty Hunters: some veterans, some total newbies. Along the way to the quadrant where the Kesseks operate, Ellis encounters his old friend Andres, now the head of military personnel, whose loyalties are only swayed by money. Ellis also takes Bohler, a young, brash female-wannabe Bounty Hunter, under his wing while he and his team of nine Bounty Hunters have to figure out ways to battle the Kesseks, the Mondrils, and the Golems, and deal with the always-changing shifts of power in this dangerous universe.</p>
                 </div>
                 <div className="about-bg">
                   <img src="./about-bg.png" />
@@ -50,7 +83,7 @@ function App() {
               </div>
               <div className="col-lg-6">
                   <div className="position-relative">
-                    <img src="./about.png" />
+                    <img src={image} className="w-100" />
                     <Light
                       url="./lights/light4.png"
                       left="auto"
@@ -59,9 +92,6 @@ function App() {
                       bottom="auto"
                       index={-1}
                     />
-                  </div>
-                  <div className="col-lg-7 offset-lg-2">
-                    <h5 className="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </h5>
                   </div>
               </div>
             </div>
@@ -91,8 +121,8 @@ function App() {
                   <button>Join our Discord</button>
                 </div>
               </div>
-              <div className="col-lg-7">
-                <img src="./community.png" />
+              <div className="col-lg-6 offset-lg-1">
+                <img src="./community1.png" />
               </div>
             </div>
           </div>
