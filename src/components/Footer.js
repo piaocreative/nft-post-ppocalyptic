@@ -45,14 +45,14 @@ const Footer = () => {
 
                             <ul className="social d-flex gap-4 mb-4 justify-content-center justify-content-md-end p-0">
                                 <li>
-                                    <Link to="/">
+                                    <a href="https://twitter.com/pst_apocalypse" to="/">
                                         <img src="./twitter.svg" />
-                                    </Link>
+                                    </a>
                                 </li>
                                 <li>
-                                    <Link to="/">
+                                    <a href="https://discord.gg/tdmnPxAKTJ" to="/">
                                         <img src="./discord.svg" />
-                                    </Link>
+                                    </a>
                                 </li>
                             </ul>
 

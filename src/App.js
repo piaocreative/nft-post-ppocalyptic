@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { Web3ReactProvider } from '@web3-react/core'
+import ReactImageAppear from 'react-image-appear';
 import Web3 from 'web3'
 
 import Header from "./components/Header";
@@ -38,8 +39,11 @@ function App() {
     "./story/story10.jpg",
     "./story/story11.jpg",
   ];
+
+
   let random;
   let imageNum;
+  
   function changeImage () {
     random = Math.random();
     imageNum = parseInt(random*11);
@@ -48,6 +52,7 @@ function App() {
       changeImage();
     }else {
       setImage(images[imageNum]);
+      console.log(image)
     }
   }
 
@@ -83,7 +88,15 @@ function App() {
               </div>
               <div className="col-lg-6">
                   <div className="position-relative">
-                    <img src={image} className="w-100" />
+
+                    <img src={ image } className="w-100" />
+                    
+                    {/* <ReactImageAppear 
+                        src={ image }
+                        loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
+                        className="w-100"
+                    /> */}
+
                     <Light
                       url="./lights/light4.png"
                       left="auto"

@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { BrowserRouter as Router,  Link } from "react-router-dom";
+import ReactImageAppear from 'react-image-appear';
 
 const Products = () => {
     let settings = {
@@ -62,85 +63,141 @@ const Products = () => {
                 <Slider {...settings}>
                     <div className="product">
                         <Link to="/">
-                            <img src="./products/product1.png" />
+                            <ReactImageAppear 
+                                src="./products/product1.png"
+                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
+                                className="w-100"
+                            />
                         </Link>
                     </div>
 
                     <div className="product">
                         <Link to="/">
-                            <img src="./products/product2.png" />
+                            <ReactImageAppear 
+                                src="./products/product2.png"
+                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
+                                className="w-100"
+                            />
                         </Link>
                     </div>
 
                     <div className="product"> 
                         <Link to="/">
-                            <img src="./products/product3.png" />
+                            <ReactImageAppear 
+                                src="./products/product3.png"
+                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
+                                className="w-100"
+                            />
                         </Link>
                     </div>
 
                     <div className="product">
                         <Link to="/">
-                            <img src="./products/product4.png" />
+                            <ReactImageAppear 
+                                src="./products/product4.png"
+                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
+                                className="w-100"
+                            />
                         </Link>
                     </div>
 
                     <div className="product">
                         <Link to="/">
-                            <img src="./products/product5.png" />
+                            <ReactImageAppear 
+                                src="./products/product5.png"
+                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
+                                className="w-100"
+                            />
                         </Link>
                     </div>
 
                     <div className="product">
                         <Link to="/">
-                            <img src="./products/product6.png" />
+                            <ReactImageAppear 
+                                src="./products/product6.png"
+                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
+                                className="w-100"
+                            />
                         </Link>
                     </div>
 
                     <div className="product">
                         <Link to="/">
-                            <img src="./products/product7.png" />
+                            <ReactImageAppear 
+                                src="./products/product7.png"
+                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
+                                className="w-100"
+                            />
                         </Link>
                     </div>
 
                     <div className="product">
                         <Link to="/">
-                            <img src="./products/product8.png" />
+                            <ReactImageAppear 
+                                src="./products/product8.png"
+                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
+                                className="w-100"
+                            />
                         </Link>
                     </div>
 
                     <div className="product">
                         <Link to="/">
-                            <img src="./products/product9.png" />
+                            <ReactImageAppear 
+                                src="./products/product9.png"
+                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
+                                className="w-100"
+                            />
                         </Link>
                     </div>
 
                     <div className="product">
                         <Link to="/">
-                            <img src="./products/product10.png" />
+                            <ReactImageAppear 
+                                src="./products/product10.png"
+                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
+                                className="w-100"
+                            />
                         </Link>
                     </div>
 
                     <div className="product">
                         <Link to="/">
-                            <img src="./products/product11.png" />
+                            <ReactImageAppear 
+                                src="./products/product11.png"
+                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
+                                className="w-100"
+                            />
                         </Link>
                     </div>
 
                     <div className="product">
                         <Link to="/">
-                            <img src="./products/product12.png" />
+                            <ReactImageAppear 
+                                src="./products/product12.png"
+                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
+                                className="w-100"
+                            />
                         </Link>
                     </div>
 
                     <div className="product">
                         <Link to="/">
-                            <img src="./products/product13.png" />
+                            <ReactImageAppear 
+                                src="./products/product13.png"
+                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
+                                className="w-100"
+                            />
                         </Link>
                     </div>
 
                     <div className="product">
                         <Link to="/">
-                            <img src="./products/product14.png" />
+                            <ReactImageAppear 
+                                src="./products/product14.png"
+                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
+                                className="w-100"
+                            />
                         </Link>
                     </div>
 

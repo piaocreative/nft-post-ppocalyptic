@@ -64,7 +64,6 @@ button {
 
     .title {
         color: #ffffff;
-        text-align: center;
         margin-bottom: 12.25rem !important;
 
         @include media-breakpoint-down(lg) {
@@ -212,6 +211,10 @@ button {
         position: absolute;
         left: 3%;
         top: 20%;
+
+        @include media-breakpoint-down(lg) {
+            top: 1%;
+        }
     }
 
     .title {
