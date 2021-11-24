@@ -53,6 +53,16 @@ button {
     background-repeat: no-repeat;
     background-position: center;
 
+    .btn {
+        font-family: 'Luckiest Guy', cursive;
+        padding: 20px 68px;
+        color: #ffffff;
+        font-size: 21px;
+        border: none;
+        background-image: repeating-linear-gradient(180deg, #FEA715, #FA7D00 100%);
+        white-space: nowrap;
+    }
+
     &:after {
         content: "";
         position: absolute;

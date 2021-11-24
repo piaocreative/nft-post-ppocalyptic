@@ -61,7 +61,7 @@ const Header = () => {
                             </Link> 
                         </div>
 
-                        {active ? <Link to="/" onClick={disconnect}><h4 className="connectWallet">Disconnect</h4></Link> : <Link to="/" onClick={connect}><h4 className="connectWallet">Wallet Connect</h4></Link>}
+                        {active ? <a href="#" onClick={disconnect}><h4 className="connectWallet">Disconnect</h4></a> : <a href="#" onClick={connect}><h4 className="connectWallet">Wallet Connect</h4></a>}
 
                     </div>
                     </nav>

@@ -17,7 +17,7 @@ const Teams = () => {
                     <div className="col-lg">
                         <div className="team">
                             <img src="./story/story4.jpg" />
-                            <h4 className="text-white"> Kabita L.</h4>
+                            <h4 className="text-white"> Imteaz A.</h4>
                             <p className="mb-0">Marketing Manager</p>
                         </div>
                     </div>

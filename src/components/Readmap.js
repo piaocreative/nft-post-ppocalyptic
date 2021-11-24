@@ -180,7 +180,7 @@ export const Readmap = () => {
                             <h2>Blockchain<br />Game</h2>
                         </div>
                         <div className="col-lg-5 offset-lg-1">
-                            <p className="mt-3 mb-0">We are planning to publish the blockchain game with  Only NFT owners can join to the game. It will be coming soon…! Enjoy it!</p>
+                            <p className="mt-3 mb-0">We are plaining to publish the blockchain game, that only NFT owners can join. Coming Soon!</p>
                         </div>
                     </div>
                 </div>

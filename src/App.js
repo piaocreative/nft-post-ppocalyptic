@@ -52,7 +52,6 @@ function App() {
       changeImage();
     }else {
       setImage(images[imageNum]);
-      console.log(image)
     }
   }
 
@@ -90,12 +89,6 @@ function App() {
                   <div className="position-relative">
 
                     <img src={ image } className="w-100" />
-                    
-                    {/* <ReactImageAppear 
-                        src={ image }
-                        loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
-                        className="w-100"
-                    /> */}
 
                     <Light
                       url="./lights/light4.png"
@@ -129,7 +122,7 @@ function App() {
             <div className="row align-items-center">
               <div className="col-lg-5">
                 <h2 className="text-black mb-5">Join the community</h2>
-                <p className="text-dark">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. </p>
+                <p className="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc molestie neque convallis, dapibus lectus at, porttitor magna. Proin et auctor massa. In interdum accumsan nulla eu feugiat. Mauris facilisis dictum eros eget imperdiet. Sed aliquet est at rhoncus dictum. Nulla erat neque, vestibulum nec tempor quis, lacinia sit amet massa. Fusce malesuada molestie velit vitae pharetra. Curabitur libero ipsum, maximus non turpis vitae, luctus maximus risus. Cras vel justo viverra, sollicitudin orci ut, ornare tortor. Nulla viverra venenatis metus. Maecenas tincidunt consectetur sodales. Sed luctus tincidunt lorem in pretium. Quisque aliquam maximus egestas.</p>
                 <div className="text-center text-lg-start">
                   <button>Join our Discord</button>
                 </div>
