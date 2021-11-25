@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Slider from "react-slick";
 import { BrowserRouter as Router,  Link } from "react-router-dom";
 import ReactImageAppear from 'react-image-appear';
@@ -57,161 +57,33 @@ const Products = () => {
           ]
     };
 
-    const [loaded, setLoaded] = useState(false);
+    const products = [
+        './products/product1.png',
+        './products/product2.png',
+        './products/product3.png',
+        './products/product4.png',
+        './products/product5.png',
+        './products/product6.png',
+        './products/product7.png',
+        './products/product8.png',
+        './products/product9.png',
+        './products/product10.png',
+        './products/product11.png',
+        './products/product12.png',
+        './products/product13.png',
+        './products/product14.png',
+    ];
 
     return(
         <div id="gallery">
             <Router>
                 <Slider {...settings}>
-                    <div className="product">
-                        <Link to="/">
-                            {/* {loaded ? null : (
-                                <img src="./loading.png" className="loading-image" />
-                            )}
 
-                            <img 
-                                style={loaded ? {} : { display: 'none' }}
-                                src="./products/product1.png"
-                                onLoad={() => setLoaded(true)} 
-                            /> */}
-
-                            <ReactImageAppear 
-                                src="./products/product1.png"
-                                loader="./loading.png"
-                                className="w-100"
-                            />
-                        </Link>
-                    </div>
-
-                    <div className="product">
-                        <Link to="/">
-                            <ReactImageAppear 
-                                src="./products/product2.png"
-                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
-                                className="w-100"
-                            />
-                        </Link>
-                    </div>
-
-                    <div className="product"> 
-                        <Link to="/">
-                            <ReactImageAppear 
-                                src="./products/product3.png"
-                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
-                                className="w-100"
-                            />
-                        </Link>
-                    </div>
-
-                    <div className="product">
-                        <Link to="/">
-                            <ReactImageAppear 
-                                src="./products/product4.png"
-                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
-                                className="w-100"
-                            />
-                        </Link>
-                    </div>
-
-                    <div className="product">
-                        <Link to="/">
-                            <ReactImageAppear 
-                                src="./products/product5.png"
-                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
-                                className="w-100"
-                            />
-                        </Link>
-                    </div>
-
-                    <div className="product">
-                        <Link to="/">
-                            <ReactImageAppear 
-                                src="./products/product6.png"
-                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
-                                className="w-100"
-                            />
-                        </Link>
-                    </div>
-
-                    <div className="product">
-                        <Link to="/">
-                            <ReactImageAppear 
-                                src="./products/product7.png"
-                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
-                                className="w-100"
-                            />
-                        </Link>
-                    </div>
-
-                    <div className="product">
-                        <Link to="/">
-                            <ReactImageAppear 
-                                src="./products/product8.png"
-                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
-                                className="w-100"
-                            />
-                        </Link>
-                    </div>
-
-                    <div className="product">
-                        <Link to="/">
-                            <ReactImageAppear 
-                                src="./products/product9.png"
-                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
-                                className="w-100"
-                            />
-                        </Link>
-                    </div>
-
-                    <div className="product">
-                        <Link to="/">
-                            <ReactImageAppear 
-                                src="./products/product10.png"
-                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
-                                className="w-100"
-                            />
-                        </Link>
-                    </div>
-
-                    <div className="product">
-                        <Link to="/">
-                            <ReactImageAppear 
-                                src="./products/product11.png"
-                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
-                                className="w-100"
-                            />
-                        </Link>
-                    </div>
-
-                    <div className="product">
-                        <Link to="/">
-                            <ReactImageAppear 
-                                src="./products/product12.png"
-                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
-                                className="w-100"
-                            />
-                        </Link>
-                    </div>
-
-                    <div className="product">
-                        <Link to="/">
-                            <ReactImageAppear 
-                                src="./products/product13.png"
-                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
-                                className="w-100"
-                            />
-                        </Link>
-                    </div>
-
-                    <div className="product">
-                        <Link to="/">
-                            <ReactImageAppear 
-                                src="./products/product14.png"
-                                loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
-                                className="w-100"
-                            />
-                        </Link>
-                    </div>
+                    {products.map((src, index) => (
+                        <div key={index} className="product">
+                            <img src={ src } className="w-100" />
+                        </div>
+                    ))}
 
                 </Slider >
             </Router>

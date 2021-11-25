@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { Web3ReactProvider } from '@web3-react/core'
-import ReactImageAppear from 'react-image-appear';
+import LoadingScreen from 'react-loading-screen';
 import Web3 from 'web3'
 
 import Header from "./components/Header";
@@ -60,10 +60,10 @@ function App() {
     const interval = setInterval(() => {
       changeImage()
     }, 500);
-
-    setTimeout(() => {
+    
+    window.addEventListener('load', () => {
       setIsLoaded(true);
-    }, 1500);
+    })
 
     return () => clearInterval(interval);
   });
@@ -145,8 +145,14 @@ function App() {
 
           <Footer />
 
-      </div>
-      :<img src="./loading.png" style={{ width:'100%', height:'100vh' }} />
+        </div>
+      :<LoadingScreen
+        loading={true}
+        bgColor='#1b1d54'
+        spinnerColor='#ff8b14'
+        textColor='#ffffff'
+        logoSrc='/logo.png'
+      > Post Apocalyptic</LoadingScreen>
       }
 
     </Web3ReactProvider>
