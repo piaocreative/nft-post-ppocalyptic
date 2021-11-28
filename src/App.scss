@@ -10,6 +10,14 @@ header {
     position: relative;
     z-index: 1;
     padding: 0.5rem 0;
+
+    button {
+        width: 18rem;
+        height: 4rem;
+        padding: 0 3rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
 }
 
 .navbar-nav {

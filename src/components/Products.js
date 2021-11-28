@@ -1,7 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import { BrowserRouter as Router,  Link } from "react-router-dom";
-import ReactImageAppear from 'react-image-appear';
+import { BrowserRouter as Router } from "react-router-dom";
 
 const Products = () => {
     let settings = {

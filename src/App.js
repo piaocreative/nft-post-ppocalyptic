@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import { Web3ReactProvider } from '@web3-react/core'
 import LoadingScreen from 'react-loading-screen';
 import Web3 from 'web3'
+import { useWallet, UseWalletProvider } from 'use-wallet'
 
 import Header from "./components/Header";
 import Banner from "./components/Banner";
@@ -69,7 +70,12 @@ function App() {
   });
 
   return (
-    <Web3ReactProvider getLibrary={getLibrary}>
+    <UseWalletProvider
+      chainId={1}
+      connectors={{
+        portis: { dAppId: 'my-dapp-id-123-xyz' },
+      }}
+    >
 
       {
         isLoaded? 
@@ -97,7 +103,7 @@ function App() {
                 <div className="col-lg-6">
                     <div className="position-relative">
 
-                      <img src={ image } className="w-100" />
+                      {/* <img src={ image } className="w-100" /> */}
 
                       <Light
                         url="./lights/light4.png"
@@ -155,7 +161,7 @@ function App() {
       > Post Apocalyptic</LoadingScreen>
       }
 
-    </Web3ReactProvider>
+    </UseWalletProvider>
   );
 }
 
