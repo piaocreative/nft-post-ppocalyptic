@@ -28,6 +28,7 @@
     "react-timeline-animation": "^1.1.9",
     "sass": "^1.43.4",
     "slick-carousel": "^1.8.1",
+    "use-wallet": "^0.13.1",
     "web-vitals": "^1.0.1",
     "web3": "^1.6.0"
   },
