@@ -1,20 +1,27 @@
 
 import React, { useState } from "react";
+import { mintNFT } from "./util/interact.js";  
 
 const Ticket = () => {
-    const [quantity, setQuantity] = useState(1);
+    const [item, setItem] = useState(1);
 
     function setUp() {
-        if(quantity < 20) {
-            setQuantity(quantity+1);
+        if(item < 20) {
+            setItem(item+1);
         }
     }
 
     function setDown() {
-        if(quantity > 1) {
-            setQuantity(quantity-1);
+        if(item > 1) {
+            setItem(item-1);
         }
     }
+
+    const onMintPressed = async () => {
+        await mintNFT(item).catch(error => {
+            console.log(error);
+        });
+    };
 
     return (
         <div className="mint-ticket border border-white mb-5">
@@ -25,10 +32,10 @@ const Ticket = () => {
                 <h4 className="text-white align-self-center">0.001 ETH</h4>
                 <div className="d-flex gap-3">
                     <button onClick={ setDown } className="fs-4">-</button>
-                    <input type="number" className="text-center" value={ quantity } />
+                    <input type="number" className="text-center" value={ item } />
                     <button onClick={ setUp } className="fs-4">+</button>
                 </div>
-                <button className="rounded-pull">Mint Now</button>
+                <button className="rounded-pull" onClick={onMintPressed} >Mint Now</button>
             </div>
         </div>
     )

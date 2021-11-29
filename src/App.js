@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import LoadingScreen from 'react-loading-screen';
-import Web3 from 'web3'
 
 import Header from "./components/Header";
 import Banner from "./components/Banner";

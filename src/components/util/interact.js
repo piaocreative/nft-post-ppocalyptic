@@ -1,10 +1,9 @@
-import { pinJSONToIPFS } from "./pinata.js";
 require("dotenv").config();
-// const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;
-// const contractABI = require("../contract-abi.json");
-// const contractAddress = "0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE";
+const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;  
+const contractABI = require("../../PostApocalypticItem.json");
+const contractAddress = "0xa562B9674CdbF550d974B27A4BF474848d55C712";
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
-// const web3 = createAlchemyWeb3(alchemyKey);
+const web3 = createAlchemyWeb3('https://eth-rinkeby.alchemyapi.io/v2/'+{alchemyKey});
 
 export const connectWallet = async () => {
   if (window.ethereum) {
@@ -84,58 +83,31 @@ export const getCurrentWalletConnected = async () => {
   }
 };
 
-// async function loadContract() {
-//   return new web3.eth.Contract(contractABI, contractAddress);
-// }
+async function loadContract() {
+  return new web3.eth.Contract(JSON.parse(contractABI), contractAddress, 
+    {
+      gasPrice: 500000,
+      gasLimit: "1000000"
+    }
+  );
+}
 
-// export const mintNFT = async (url, name, description) => {
-//   if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
-//     return {
-//       success: false,
-//       status: "❗Please make sure all fields are completed before minting.",
-//     };
-//   }
+export const mintNFT = async (NUM_ITEMS) => {
 
-//   //make metadata
-//   const metadata = new Object();
-//   metadata.name = name;
-//   metadata.image = url;
-//   metadata.description = description;
+  const nftContract = window.contract = await new web3.eth.Contract(contractABI.abi, contractAddress,
+    {
+      gasPrice: 500000,
+      gasLimit: "1000000"
+    }  
+  );
 
-//   const pinataResponse = await pinJSONToIPFS(metadata);
-//   if (!pinataResponse.success) {
-//     return {
-//       success: false,
-//       status: "😢 Something went wrong while uploading your tokenURI.",
-//     };
-//   }
-//   const tokenURI = pinataResponse.pinataUrl;
+  for (var i = 1; i <= NUM_ITEMS; i++) {
+    const result = await nftContract.methods
+      .mintItem(window.ethereum.selectedAddress, `https://post-apocalyptic-api.herokuapp.com/api/token/${i}`)
+      .send({ from: window.ethereum.selectedAddress }).then(console.log('minted')).catch(error => console.log(error));
 
-//   window.contract = await new web3.eth.Contract(contractABI, contractAddress);
-
-//   const transactionParameters = {
-//     to: contractAddress, // Required except during contract publications.
-//     from: window.ethereum.selectedAddress, // must match user's active address.
-//     data: window.contract.methods
-//       .mintNFT(window.ethereum.selectedAddress, tokenURI)
-//       .encodeABI(),
-//   };
-
-//   try {
-//     const txHash = await window.ethereum.request({
-//       method: "eth_sendTransaction",
-//       params: [transactionParameters],
-//     });
-//     return {
-//       success: true,
-//       status:
-//         "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
-//         txHash,
-//     };
-//   } catch (error) {
-//     return {
-//       success: false,
-//       status: "😥 Something went wrong: " + error.message,
-//     };
-//   }
-// };
+      if(result) {
+        console.log("Minted Item. Transaction: " + result.transactionHash);
+      }
+  }
+};
