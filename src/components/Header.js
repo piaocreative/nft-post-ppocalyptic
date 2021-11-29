@@ -1,24 +1,58 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import {Link} from 'react-scroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { useWallet } from 'use-wallet'
+import { connectWallet, getCurrentWalletConnected } from "./util/interact.js";  
 
 const Header = () => {
 
-    const wallet = useWallet();
+    const [walletAddress, setWallet] = useState("");
+    const [status, setStatus] = useState("");
 
-    function connect() {
-        wallet.connect();
-        console.log(wallet.status);
-        console.log(wallet.account)
+    function addWalletListener() {
+        if (window.ethereum) {
+            window.ethereum.on("accountsChanged", (accounts) => {
+            if (accounts.length > 0) {
+                setWallet(accounts[0]);
+                setStatus("👆🏽 Write a message in the text-field above.");
+            } else {
+                setWallet("");
+                setStatus("🦊 Connect to Metamask using the top right button.");
+            }
+            });
+        } else {
+            setStatus(
+            <p>
+                {" "}
+                🦊{" "}
+                <a target="_blank" href={`https://metamask.io/download.html`}>
+                You must install Metamask, a virtual Ethereum wallet, in your
+                browser.
+                </a>
+            </p>
+            );
+        }
     }
+
+    const connectWalletPressed = async () => {
+        const walletResponse = await connectWallet();
+        setStatus(walletResponse.status);
+        setWallet(walletResponse.address);
+    };  
+    
+    useEffect(async () => {
+        const { address, status } = await getCurrentWalletConnected();
+    
+        setWallet(address);
+        setStatus(status);
+    
+        addWalletListener();
+      }, []);
 
     return(
         <Router>
             <header>
-
                 <div className="container">
                     <nav className="navbar navbar-expand-lg">
                         <div className="navbar-brand">
@@ -49,16 +83,19 @@ const Header = () => {
                                 <Link to="team" spy={true} smooth={true} className="nav-link">
                                     Team
                                 </Link> 
+
                             </div>
 
-                            <div className="flex flex-col items-center justify-center">
-                                {wallet.status === 'connected' ? (
-                                    <button onClick={() => wallet.reset()}>Connected {wallet.account} </button>
+                            <button id="walletButton" onClick={connectWalletPressed}>
+                                {walletAddress.length > 0 ? (
+                                "Connected: " +
+                                String(walletAddress).substring(0, 6) +
+                                "..." +
+                                String(walletAddress).substring(38)
                                 ) : (
-                                    <button onClick={connect}>Connect Wallet</button>
+                                <span>Connect Wallet</span>
                                 )}
-                                {/* {wallet ? <button onClick={disconnect}>connected <span>{wallet.substring(0, 5)+'...'}</span></button> : <button onClick={connect}>Wallet Connect</button> } */}
-                            </div>
+                            </button>
 
                         </div>
                     </nav>

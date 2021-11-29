@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from "react";
-import { Web3ReactProvider } from '@web3-react/core'
 import LoadingScreen from 'react-loading-screen';
 import Web3 from 'web3'
-import { useWallet, UseWalletProvider } from 'use-wallet'
 
 import Header from "./components/Header";
 import Banner from "./components/Banner";
@@ -11,16 +9,13 @@ import { Readmap } from "./components/Readmap";
 import Teams from "./components/Teams";
 import Footer from "./components/Footer";
 import Light from "./components/Light";
+import Ticket from "./components/Ticket"
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import './App.scss';
-
-function getLibrary(provider) {
-  return new Web3(provider)
-}
 
 function App() {
 
@@ -70,13 +65,7 @@ function App() {
   });
 
   return (
-    <UseWalletProvider
-      chainId={1}
-      connectors={{
-        portis: { dAppId: 'my-dapp-id-123-xyz' },
-      }}
-    >
-
+    <div>
       {
         isLoaded? 
         <div className="App">
@@ -104,6 +93,8 @@ function App() {
                     <div className="position-relative">
 
                       {/* <img src={ image } className="w-100" /> */}
+
+                      <Ticket />
 
                       <Light
                         url="./lights/light4.png"
@@ -161,7 +152,7 @@ function App() {
       > Post Apocalyptic</LoadingScreen>
       }
 
-    </UseWalletProvider>
+    </div>
   );
 }
 

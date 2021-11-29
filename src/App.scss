@@ -405,3 +405,25 @@ footer {
     position: relative;
     margin-bottom: -1rem;
   }
+
+  .mint-ticket {
+      padding: 5rem 3rem;
+      margin: auto;
+
+      input {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 3rem;
+        font-family: 'Luckiest Guy', cursive;       
+      }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+      button {
+          padding: 0 1.5rem;
+      }
+  }
