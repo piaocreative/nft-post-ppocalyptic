@@ -1,9 +1,14 @@
 require("dotenv").config();
-const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;  
+const alchemyKey = process.env.ALCHEMY_KEY;  
+// const alchemyKey = "5XTQ6Li-bjouDmQuCw5JNgLAQBSKSzaq";  
+// const contractAddress = process.env.CONTRACT_ADDRESS;
+const contractAddress = "0xa562b9674cdbf550d974b27a4bf474848d55c712";
+const ownerAddress = "0xc9f3A19f0d6f383c5026E55ba3F2C6d2886bB7f6";
 const contractABI = require("../../PostApocalypticItem.json");
-const contractAddress = "0xa562B9674CdbF550d974B27A4BF474848d55C712";
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
-const web3 = createAlchemyWeb3('https://eth-rinkeby.alchemyapi.io/v2/'+{alchemyKey});
+const web3 = createAlchemyWeb3('https://eth-rinkeby.alchemyapi.io/v2/' + alchemyKey);
+
+console.log('alchemyKey', alchemyKey);
 
 export const connectWallet = async () => {
   if (window.ethereum) {
@@ -96,14 +101,17 @@ export const mintNFT = async (NUM_ITEMS) => {
 
   const nftContract = window.contract = await new web3.eth.Contract(contractABI.abi, contractAddress,
     {
-      gasPrice: 500000,
-      gasLimit: "1000000"
+      from: ownerAddress
     }  
   );
 
-  for (var i = 1; i <= NUM_ITEMS; i++) {
+  const totalSupply = await nftContract.methods.totalSupply().call();
+  console.log('total:', totalSupply);
+
+  for (var i = 0; i < NUM_ITEMS; i++) {
+    var tokenInx = totalSupply + 1 + i;
     const result = await nftContract.methods
-      .mintItem(window.ethereum.selectedAddress, `https://post-apocalyptic-api.herokuapp.com/api/token/${i}`)
+      .mintItem(window.ethereum.selectedAddress, `https://post-apocalyptic-api.herokuapp.com/api/token/${tokenInx}`)
       .send({ from: window.ethereum.selectedAddress }).then(console.log('minted')).catch(error => console.log(error));
 
       if(result) {

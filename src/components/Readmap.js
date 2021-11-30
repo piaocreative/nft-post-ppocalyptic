@@ -80,11 +80,8 @@ export const Readmap = () => {
     return (
         <div id="roadmap" className="container">
             <div className="row">   
-                <div className="col-lg-6">
+                <div className="col-12">
                     <h2 className="text-white mb-4">Roadmap</h2>
-                </div>
-                <div className="col-lg-7">
-                    <p className="mt-3">We have a lot of ideas that make the customer the hero of our story. We love solving problems and exceeding your expectations. We will work hard with our community to make Discord and Twitter even cooler throughout time.</p>
                 </div>
             </div>
 

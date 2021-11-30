@@ -38,8 +38,8 @@ const Banner = () => {
                     <div className="col-lg-6 offset-xl-1">
                         <p  style={{ marginBottom: 95 }}>The Post-Apocalyptic world has been divided into different quadrants where 10,000 Armored Warriors battle each other for survival. Each Post-Apocalyptic NFT is a unique ERC-721 digital collectible living on the Ethereum blockchain.</p>
                         <div className="d-md-flex align-items-center justify-content-between text-center">
-                            <a href="#" className="mb-5 mb-md-0 btn" rel="noreferrer" target="_blank">See on opnesea</a>
-                             <ul className="social-link d-flex gap-5 mb-0 justify-content-center justify-content-md-start">
+                            <a href="https://opensea.io/collection/post-apocalyptic-v2-1" className="mb-5 mb-md-0 btn" rel="noreferrer" target="_blank">Buy on Opnesea</a>
+                            <ul className="social-link d-flex gap-5 mb-0 justify-content-center justify-content-md-start">
                                 <Router>
                                     <li>
                                         <a href="https://twitter.com/pst_apocalypse" className="social-item">
