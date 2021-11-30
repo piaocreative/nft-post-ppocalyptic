@@ -1,7 +1,7 @@
 require("dotenv").config();
 const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;  
 const contractABI = require("../../PostApocalypticItem.json");
-const contractAddress = "0xa562B9674CdbF550d974B27A4BF474848d55C712";
+const contractAddress = "0x1d509599b635ac6eE8B74519f0D9360736F9F540";
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3('https://eth-rinkeby.alchemyapi.io/v2/'+{alchemyKey});
 
@@ -104,7 +104,7 @@ export const mintNFT = async (NUM_ITEMS) => {
   for (var i = 1; i <= NUM_ITEMS; i++) {
     const result = await nftContract.methods
       .mintItem(window.ethereum.selectedAddress, `https://post-apocalyptic-api.herokuapp.com/api/token/${i}`)
-      .send({ from: window.ethereum.selectedAddress }).then(console.log('minted')).catch(error => console.log(error));
+      .send({ from: window.ethereum.selectedAddress, value: web3.utils.toWei('0.05', 'ether') }).then(console.log('minted')).catch(error => console.log(error));
 
       if(result) {
         console.log("Minted Item. Transaction: " + result.transactionHash);
