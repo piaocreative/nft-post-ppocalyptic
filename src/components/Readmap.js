@@ -32,7 +32,7 @@ const Timeline = ({ setObserver, callback }) => {
       setObserver(square5.current);
       setObserver(square6.current);
       setObserver(square7.current);
-    }, []);
+    }, [setObserver]);
   
     return (
       <div className="wrapper">

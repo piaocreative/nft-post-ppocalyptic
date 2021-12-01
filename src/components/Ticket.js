@@ -58,7 +58,7 @@ const Ticket = (props) => {
                 <h4 className="text-white align-self-center">0.05 ETH</h4>
                 <div className="d-flex gap-3">
                     <button onClick={ setDown } className="fs-4">-</button>
-                    <input type="number" className="text-center" value={ item } />
+                    <input type="number" className="text-center" value={item} onChange={ e => setItem(e.target.value) } />
                     <button onClick={ setUp } className="fs-4">+</button>
                 </div>
                 <button className="rounded-pull" onClick={onMintPressed}>Mint Now</button>

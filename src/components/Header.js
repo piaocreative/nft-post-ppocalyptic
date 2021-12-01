@@ -8,7 +8,7 @@ import { connectWallet, getCurrentWalletConnected } from "./util/interact.js";
 const Header = () => {
 
     const [walletAddress, setWallet] = useState("");
-    const [status, setStatus] = useState("");
+    const [ , setStatus] = useState("");
 
     function addWalletListener() {
         if (window.ethereum) {
@@ -41,14 +41,15 @@ const Header = () => {
         setWallet(walletResponse.address);
     };  
     
-    useEffect(async () => {
-        const { address, status } = await getCurrentWalletConnected();
-    
-        setWallet(address);
-        setStatus(status);
-    
-        addWalletListener();
-      }, []);
+    useEffect(() => {
+        async function fetchCurrentWatlletConnected() {
+            const { address, status } = await getCurrentWalletConnected();
+            setWallet(address);
+            setStatus(status);
+            addWalletListener();
+        }
+        fetchCurrentWatlletConnected();
+    }, [])
 
     return(
         <Router>
@@ -57,7 +58,7 @@ const Header = () => {
                     <nav className="navbar navbar-expand-lg">
                         <div className="navbar-brand">
                             <Link to="/">
-                                <img src="./logo.png" />
+                                <img src="./logo.png" alt="Logo"/>
                             </Link>
                         </div>
 

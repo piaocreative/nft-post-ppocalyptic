@@ -1,8 +1,10 @@
+import React from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
 import { format } from 'date-fns';
+import { formatNumber } from './util/utilFunctions';
 
 const Banner = (props) => {
-    let date = format(new Date(), 'yyyy-MM-dd');  
+    let date = format(new Date(), 'yyyy-MM-dd');
     
     return(
         <div className="banner" style={{ backgroundImage: `url(./homebanner.png)` }}>

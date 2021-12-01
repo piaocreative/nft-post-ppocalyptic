@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import LoadingScreen from 'react-loading-screen';
 
+import StatusBar from "./components/StatusBar";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import Products from "./components/Products";
@@ -21,6 +22,7 @@ import './App.scss';
 function App() {
 
   const [isLoaded, setIsLoaded] = useState(false);
+  const [countnft, setCountnft] = useState(0);
 
   const [image, setImage] = useState("./story/story1.jpg");
 
@@ -63,6 +65,10 @@ function App() {
     }
   }
 
+  const handleNftChange = (count) => {
+    setCountnft(countnft + count);
+  }
+
   useEffect(() => {
     const interval = setInterval(() => {
       changeImage()
@@ -80,6 +86,8 @@ function App() {
       {
         isLoaded? 
         <div className="App">          
+
+          <StatusBar countnft={countnft} />
 
           <Header />
 
@@ -150,7 +158,7 @@ function App() {
               </div>
             </div>
           </div>
-
+          
           <Footer />
 
         </div>
