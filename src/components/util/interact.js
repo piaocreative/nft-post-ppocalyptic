@@ -2,9 +2,9 @@ require("dotenv").config();
 
 // For Mainnet
 ///////////////////////////////////////////////////////////////////////////////////////////////
-const alchemyKey = process.env.ALCHEMY_KEY;
-const contractAddress = process.env.CONTRACT_ADDRESS;
-const ownerAddress = process.env.OWNER_ADDRESS;
+const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;
+const contractAddress = process.env.REACT_APP_CONTRACT_ADDRESS;
+const ownerAddress = process.env.REACT_APP_OWNER_ADDRESS;
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 // For testnet
