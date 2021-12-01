@@ -18,10 +18,10 @@ const Header = () => {
             window.ethereum.on("accountsChanged", (accounts) => {
             if (accounts.length > 0) {
                 setWallet(accounts[0]);
-                setStatus("👆🏽 Please mint the items using the connected wallet.");
+                setStatus("Please mint the items using the connected wallet.");
             } else {
                 setWallet("");
-                setStatus("🦊 Please connect to Metamask using the top right button.");
+                setStatus("🦊 Please connect to Metamask using the Connect Wallet button.");
             }
             });
         } else {

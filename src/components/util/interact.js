@@ -25,7 +25,7 @@ export const connectWallet = async () => {
         method: "eth_requestAccounts",
       });
       const obj = {
-        status: "👆🏽 Please mint the items using the connected wallet.",
+        status: "Please mint the items using the connected wallet.",
         address: addressArray[0],
       };
       return obj;
@@ -63,12 +63,12 @@ export const getCurrentWalletConnected = async () => {
       if (addressArray.length > 0) {
         return {
           address: addressArray[0],
-          status: "👆🏽 Please mint the items using the connected wallet.",
+          status: "Please mint the items using the connected wallet.",
         };
       } else {
         return {
           address: "",
-          status: "🦊 Connect to Metamask using the top right button.",
+          status: "🦊 Connect to Metamask using the Connect Wallet button.",
         };
       }
     } catch (err) {
@@ -136,6 +136,6 @@ export const mintNFT = async (NUM_ITEMS) => {
 
   return {
     mintedItems: mintedItems,
-    messsage: msg ? "Minted Tokens " + msg.substring(0, msg.length - 2) + " successfully. Thanks!" : ""
+    messsage: msg ? "Minted Items " + msg.substring(0, msg.length - 2) + " successfully. Thanks!" : ""
   };
 };
