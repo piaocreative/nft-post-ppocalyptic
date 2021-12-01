@@ -1,9 +1,9 @@
-import React, { useEffect, useState  } from 'react';
+import React from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
 import { format } from 'date-fns';
-import { getMintedTotal } from "./util/interact.js"; 
+import { formatNumber } from './util/utilFunctions';
 
-const Banner = () => {
+const Banner = ({countnft}) => {
     let date = format(new Date(), 'yyyy-MM-dd');
     
     return(
@@ -16,7 +16,7 @@ const Banner = () => {
                     <div className="col-lg-5">
                         <div className="ntf-info">
                             <h2 className="text-white"> {date} </h2>
-                            <p>0 NTFS Minted <span className="ms-3">10,000 NFTs available</span></p>
+                            <p><strong>{countnft}</strong> NTFS Minted <span className="ms-3"><strong>{formatNumber(10000 - countnft)}</strong>10,000 NFTs available</span></p>
                         </div>
                     </div>
                     <div className="col-lg-6 offset-xl-1">

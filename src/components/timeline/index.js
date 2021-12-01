@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 
 function ___$insertStyle(css) {
@@ -127,7 +128,7 @@ var TimelineObserver = function (_a) {
         return function () {
             document.removeEventListener("scroll", animation);
         };
-    }, []);
+    });
     var setObserver = function (elem, callbackFn) {
         var elemId = elem === null || elem === void 0 ? void 0 : elem.id;
         if (initialColor) {

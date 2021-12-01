@@ -2,8 +2,11 @@
 import React, { useState } from "react";
 import { mintNFT } from "./util/interact.js";  
 
-const Ticket = () => {
+const Ticket = (props) => {
     const [item, setItem] = useState(1);
+    const [showMessage, setShowMessage] = useState(null);
+
+    const {handleNftChange} = props;
 
     function setUp() {
         if(item < 20) {
@@ -18,8 +21,16 @@ const Ticket = () => {
     }
 
     const onMintPressed = async () => {
-        await mintNFT(item).catch(error => {
+        handleNftChange(item);
+        
+        setShowMessage("Success");
+        await mintNFT(item)
+        .then(() => {
+            setShowMessage("Success")
+        })
+        .catch(error => {
             console.log(error);
+            setShowMessage("Error");
         });
     };
 
@@ -32,11 +43,12 @@ const Ticket = () => {
                 <h4 className="text-white align-self-center">0.05 ETH</h4>
                 <div className="d-flex gap-3">
                     <button onClick={ setDown } className="fs-4">-</button>
-                    <input type="number" className="text-center" value={ item } />
+                    <input type="number" className="text-center" value={item} onChange={ e => setItem(e.target.value) } />
                     <button onClick={ setUp } className="fs-4">+</button>
                 </div>
                 <button className="rounded-pull" onClick={onMintPressed}>Mint Now</button>
             </div>
+            {showMessage!==null}
         </div>
     )
 }
