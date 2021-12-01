@@ -1,6 +1,6 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "The Post-Apocalyptic",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@alch/alchemy-web3": "^1.1.8",
@@ -57,5 +57,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
