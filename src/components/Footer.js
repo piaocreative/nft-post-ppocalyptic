@@ -53,7 +53,7 @@ const Footer = () => {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://discord.gg/tdmnPxAKTJ" rel="noreferrer" target="_blank">
+                                    <a href="https://discord.gg/uybmKaAae2" rel="noreferrer" target="_blank">
                                         <img src="./discord.svg" alt="Post-Apocalyptic Discord" />
                                     </a>
                                 </li>

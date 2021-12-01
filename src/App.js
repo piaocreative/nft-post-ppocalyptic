@@ -142,7 +142,7 @@ function App() {
                   <h2 className="text-black mb-5">Join the community</h2>
                   <p className="text-dark">The Post-Apocalyptic world has been divided into different quadrants where 10,000 Armored Warriors battle each other for survival. Each Post-Apocalyptic NFT is a unique ERC-721 digital collectible living on the Ethereum blockchain.</p>
                   <div className="text-center text-lg-start">
-                    <a href="https://discord.gg/tdmnPxAKTJ" rel="noreferrer" target="_blank" className="btn">Join our Discord</a>
+                    <a href="https://discord.gg/uybmKaAae2" rel="noreferrer" target="_blank" className="btn">Join our Discord</a>
                   </div>
                 </div>
                 <div className="col-lg-6 offset-lg-1">
