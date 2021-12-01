@@ -4,33 +4,48 @@ import { mintNFT } from "./util/interact.js";
 
 const Ticket = (props) => {
     const [item, setItem] = useState(1);
-    const [showMessage, setShowMessage] = useState(null);
-
-    const {handleNftChange} = props;
+    const [status, setStatus] = useState("");
 
     function setUp() {
-        if(item < 20) {
-            setItem(item+1);
+        if (item < 20) {
+            setItem(item + 1);
         }
     }
 
     function setDown() {
-        if(item > 1) {
-            setItem(item-1);
+        if (item > 1) {
+            setItem(item - 1);
         }
     }
 
     const onMintPressed = async () => {
-        handleNftChange(item);
+        setStatus(
+        <p className="text-white text-center fs-6 py-3 m-0">
+            {" "}
+            🦊{" "}
+            {"Minting now..."}
+        </p>
+        );
         
-        setShowMessage("Success");
-        await mintNFT(item)
-        .then(() => {
-            setShowMessage("Success")
-        })
-        .catch(error => {
-            console.log(error);
-            setShowMessage("Error");
+        await mintNFT(item).then(result => {
+            if (result.mintedItems != 0) {
+                props.handleChangeCount(props.count + result.mintedItems);
+                setStatus(
+                <p className="text-white text-center fs-6 py-3 m-0">
+                    {" "}
+                    🦊{" "}
+                    {result.messsage}
+                </p>
+                );
+            }
+        }).catch(error => {
+            setStatus(
+            <p className="text-danger text-center fs-6 py-3 m-0">
+                {" "}
+                😥 {" "}
+                {error.message}
+            </p>
+            );
         });
     };
 
@@ -48,7 +63,7 @@ const Ticket = (props) => {
                 </div>
                 <button className="rounded-pull" onClick={onMintPressed}>Mint Now</button>
             </div>
-            {showMessage!==null}
+            {status}
         </div>
     )
 }

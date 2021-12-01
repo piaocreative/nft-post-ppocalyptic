@@ -34,14 +34,17 @@ const Footer = () => {
                             </ul>          
                         </div>
 
-                        <div className="navbar-brand mb-0">
+                        <div className="navbar-brand mb-0 text-center">
                             <Link to="/">
                                 <img src="./logo.png" alt="Post-Apocalyptic" />
                             </Link>
+                            <p className="py-3 mb-0">Copyright 2021. The Post-Apocalyptic.</p>
                         </div>
 
                         <div className="text-center text-lg-end">
-                            <h6 className="mb-5">SEE ON OPENSEA </h6>
+                        
+                            <a href="https://opensea.io/collection/post-apocalyptic-v4" rel="noreferrer" target="_blank"><h6 className="mb-3">SEE ON OPENSEA</h6></a>
+                            
 
                             <ul className="social d-flex gap-4 mb-4 justify-content-center justify-content-md-end p-0">
                                 <li>
@@ -54,9 +57,7 @@ const Footer = () => {
                                         <img src="./discord.svg" alt="Post-Apocalyptic Discord" />
                                     </a>
                                 </li>
-                            </ul>
-
-                            <p className="mb-0">Copyright 2021. The Post-Apocalyptic.</p>
+                            </ul>                            
 
                         </div>
                         
