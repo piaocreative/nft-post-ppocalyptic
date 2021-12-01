@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import LoadingScreen from 'react-loading-screen';
 
-import StatusBar from "./components/StatusBar";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import Products from "./components/Products";
@@ -81,9 +80,7 @@ function App() {
     <div>
       {
         isLoaded? 
-        <div className="App">          
-
-          <StatusBar />
+        <div className="App">
 
           <Header />
 

@@ -1,13 +1,23 @@
 require("dotenv").config();
+
+// For Mainnet
+///////////////////////////////////////////////////////////////////////////////////////////////
 // const alchemyKey = process.env.ALCHEMY_KEY;  
 // const alchemyKey = "https://eth-mainnet.alchemyapi.io/v2/5XTQ6Li-bjouDmQuCw5JNgLAQBSKSzaq"; 
-const alchemyKey = "https://eth-rinkeby.alchemyapi.io/v2/5XTQ6Li-bjouDmQuCw5JNgLAQBSKSzaq";  // Testnet
+
 // const contractAddress = process.env.CONTRACT_ADDRESS;
 // const contractAddress = "0x5c6ddff88522dfcf9512d0fec1eec8f428871011";
-const contractAddress = "0x5abf70ee53b9033c3e1d2a7cedb1f116bb951425"; // Testnet
+
 // const ownerAddress = process.env.OWNER_ADDRESS;
 // const ownerAddress = "0xc9f3A19f0d6f383c5026E55ba3F2C6d2886bB7f6";
-const ownerAddress = "0xe228a5cf2d1019f43af014f1fc9c6ea3bc427101";  // Testnet
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+// For testnet
+///////////////////////////////////////////////////////////////////////////////////////////////
+const alchemyKey = "https://eth-rinkeby.alchemyapi.io/v2/5XTQ6Li-bjouDmQuCw5JNgLAQBSKSzaq";
+const contractAddress = "0x5abf70ee53b9033c3e1d2a7cedb1f116bb951425";
+const ownerAddress = "0xe228a5cf2d1019f43af014f1fc9c6ea3bc427101";
+///////////////////////////////////////////////////////////////////////////////////////////////
 
 const contractABI = require("../../PostApocalypticItem.json");
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");

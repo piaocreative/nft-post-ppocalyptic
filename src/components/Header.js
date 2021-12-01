@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import { Link } from 'react-scroll'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
+import StatusBar from "./StatusBar";
+
 import { connectWallet, getCurrentWalletConnected } from "./util/interact.js";  
 
 const Header = () => {
 
     const [walletAddress, setWallet] = useState("");
-    const [ , setStatus] = useState("");
+    const [status, setStatus] = useState("");
 
     function addWalletListener() {
         if (window.ethereum) {
@@ -53,6 +56,8 @@ const Header = () => {
 
     return(
         <Router>
+            <StatusBar status={status} />
+            
             <header>
                 <div className="container">
                     <nav className="navbar navbar-expand-lg">
