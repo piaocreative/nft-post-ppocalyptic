@@ -26,7 +26,7 @@ const Header = () => {
             <p>
                 {" "}
                 🦊{" "}
-                <a target="_blank" href={`https://metamask.io/download.html`}>
+                <a href={`https://metamask.io/download.html`} rel="noreferrer" target="_blank">
                 You must install Metamask, a virtual Ethereum wallet, in your
                 browser.
                 </a>

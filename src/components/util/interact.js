@@ -1,15 +1,13 @@
 require("dotenv").config();
-const alchemyKey = process.env.ALCHEMY_KEY;  
-// const alchemyKey = "5XTQ6Li-bjouDmQuCw5JNgLAQBSKSzaq";  
+// const alchemyKey = process.env.ALCHEMY_KEY;  
+const alchemyKey = "https://eth-mainnet.alchemyapi.io/v2/5XTQ6Li-bjouDmQuCw5JNgLAQBSKSzaq";  
 // const contractAddress = process.env.CONTRACT_ADDRESS;
-const contractAddress = "0xa562b9674cdbf550d974b27a4bf474848d55c712";
+const contractAddress = "0x5c6ddff88522dfcf9512d0fec1eec8f428871011";
+// const ownerAddress = process.env.OWNER_ADDRESS;
 const ownerAddress = "0xc9f3A19f0d6f383c5026E55ba3F2C6d2886bB7f6";
 const contractABI = require("../../PostApocalypticItem.json");
-const contractAddress = "0x1d509599b635ac6eE8B74519f0D9360736F9F540";
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
-const web3 = createAlchemyWeb3('https://eth-rinkeby.alchemyapi.io/v2/' + alchemyKey);
-
-console.log('alchemyKey', alchemyKey);
+const web3 = createAlchemyWeb3(alchemyKey);
 
 export const connectWallet = async () => {
   if (window.ethereum) {
@@ -36,7 +34,7 @@ export const connectWallet = async () => {
           <p>
             {" "}
             🦊{" "}
-            <a target="_blank" href={`https://metamask.io/download.html`}>
+            <a href={`https://metamask.io/download.html`} rel="noreferrer" target="_blank">
               You must install Metamask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -78,7 +76,7 @@ export const getCurrentWalletConnected = async () => {
           <p>
             {" "}
             🦊{" "}
-            <a target="_blank" href={`https://metamask.io/download.html`}>
+            <a href={`https://metamask.io/download.html`} rel="noreferrer" target="_blank">
               You must install Metamask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -89,14 +87,17 @@ export const getCurrentWalletConnected = async () => {
   }
 };
 
-async function loadContract() {
-  return new web3.eth.Contract(JSON.parse(contractABI), contractAddress, 
+export const getMintedTotal = async () => {
+  const nftContract = window.contract = await new web3.eth.Contract(contractABI.abi, contractAddress,
     {
-      gasPrice: 500000,
-      gasLimit: "1000000"
-    }
+      from: ownerAddress
+    }  
   );
-}
+
+  var totalSupply = await nftContract.methods.totalSupply().call();
+
+  return parseInt(totalSupply);
+};
 
 export const mintNFT = async (NUM_ITEMS) => {
 
@@ -107,12 +108,15 @@ export const mintNFT = async (NUM_ITEMS) => {
   );
 
   const totalSupply = await nftContract.methods.totalSupply().call();
-  console.log('total:', totalSupply);
+  console.log('Total Minted Items:', totalSupply);  
 
   for (var i = 0; i < NUM_ITEMS; i++) {
-    var tokenInx = totalSupply + 1 + i;
+    var tokenInx = parseInt(totalSupply) + 1 + i;
+
+    console.log("Starting minting token " + tokenInx);
+
     const result = await nftContract.methods
-      .mintItem(window.ethereum.selectedAddress, `https://post-apocalyptic-api.herokuapp.com/api/token/${i}`)
+      .mintItem(window.ethereum.selectedAddress, `https://post-apocalyptic-api.herokuapp.com/api/token/${tokenInx}`)
       .send({ from: window.ethereum.selectedAddress, value: web3.utils.toWei('0.05', 'ether') }).then(console.log('minted')).catch(error => console.log(error));
 
       if(result) {

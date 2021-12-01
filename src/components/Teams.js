@@ -9,35 +9,35 @@ const Teams = () => {
                 <div className="row">
                     <div className="col-lg">
                         <div className="team">
-                            <img src="./team/team.jpg" />
+                            <img src="./team/team.jpg" alt="Post-Apocalyptic Team" />
                             <h4 className="text-white"> Kiran N.</h4>
                             <p className="mb-0">Director</p>
                         </div>
                     </div>
                     <div className="col-lg">
                         <div className="team">
-                            <img src="./story/story4.jpg" />
+                            <img src="./story/story4.jpg" alt="Post-Apocalyptic Team" />
                             <h4 className="text-white"> Imteaz A.</h4>
                             <p className="mb-0">Marketing Manager</p>
                         </div>
                     </div>
                     <div className="col-lg">
                         <div className="team">
-                            <img src="./story/story3.jpg" />
+                            <img src="./story/story3.jpg" alt="Post-Apocalyptic Team" />
                             <h4 className="text-white">Svetlana G.</h4>
                             <p className="mb-0">Design Team Manager</p>
                         </div>
                     </div>
                     <div className="col-lg">
                         <div className="team">
-                            <img src="./story/story1.jpg" />
+                            <img src="./story/story1.jpg" alt="Post-Apocalyptic Team" />
                             <h4 className="text-white"> Evgenia O.</h4>
                             <p className="mb-0">Artist</p>
                         </div>
                     </div>
                     <div className="col-lg">
                         <div className="team">
-                            <img src="./story/story2.jpg" />
+                            <img src="./story/story2.jpg" alt="Post-Apocalyptic Team" />
                             <h4 className="text-white">Nikita K.</h4>
                             <p className="mb-0">Artist</p>
                         </div>

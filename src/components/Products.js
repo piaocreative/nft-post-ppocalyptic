@@ -80,7 +80,7 @@ const Products = () => {
 
                     {products.map((src, index) => (
                         <div key={index} className="product">
-                            <img src={ src } className="w-100" />
+                            <img src={ src } className="w-100" alt="Post-Apocalyptic Products" />
                         </div>
                     ))}
 

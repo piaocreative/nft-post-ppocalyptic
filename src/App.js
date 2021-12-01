@@ -85,7 +85,7 @@ function App() {
                       The future: maybe a long time off, maybe sooner than you think. The landscape of this arid post-apocalyptic world has been divided into different quadrants where 10,000 Armored Warriors battle each other for survival. Within these 10,000 Armored Warriors, there are a limited number of military personnel trying to maintain order against different organized factions who are fighting each other—and anyone who stands in their way—for supplies, for territory, and just for kicks. These factions include the Kesseks, the Mondrils, and the Golems. (Oh, and did we mention the atomic-mutated dragons who can strike without warning? Because that’s what you also have in a post-apocalyptic world.) In the middle of all this: Ellis Ulton, a battle-scarred Bounty Hunter who is just trying to make a living as he navigates between the military personnel he once belonged to and the Kesseks, the Mondrils, and the Golems who really call the shots now. Ellis is reluctantly hired for a job which will force him to come up against the dreaded Kesseks, the most vicious faction within the 10,000 Armored Warriors. So he brings together his own team of nine Bounty Hunters: some veterans, some total newbies. Along the way to the quadrant where the Kesseks operate, Ellis encounters his old friend Andres, now the head of military personnel, whose loyalties are only swayed by money. Ellis also takes Bohler, a young, brash female-wannabe Bounty Hunter, under his wing while he and his team of nine Bounty Hunters have to figure out ways to battle the Kesseks, the Mondrils, and the Golems, and deal with the always-changing shifts of power in this dangerous universe.</p>
                   </div>
                   <div className="about-bg">
-                    <img src="./about-bg.png" />
+                    <img src="./about-bg.png" alt="About Post-Apocalyptic" />
                   </div>
                 </div>
                 <div className="col-lg-6">
@@ -133,7 +133,7 @@ function App() {
                   </div>
                 </div>
                 <div className="col-lg-6 offset-lg-1">
-                  <img src="./community1.png" />
+                  <img src="./community1.png" alt="Post-Apocalyptic Community" />
                 </div>
               </div>
             </div>
