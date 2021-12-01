@@ -5,12 +5,19 @@
     overflow-x: hidden;
 }
 
-// header
-header {
+// Status Bar
+.statusbar {
     position: relative;
     z-index: 1;
+}
+
+// header
+header {
+    position: absolute;
+    z-index: 1;
     padding: 0.5rem 0;
-    top: 30px;
+    top: 5.375rem;
+    width: 100%;
 
     button {
         width: 18rem;
@@ -56,8 +63,7 @@ button {
 
 .banner {
     position: relative;
-    top: -6rem;
-    padding: 14.875rem 0;
+    padding: 18.75rem 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
