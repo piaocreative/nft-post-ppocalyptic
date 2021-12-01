@@ -28,7 +28,7 @@ const Ticket = (props) => {
         );
         
         await mintNFT(item).then(result => {
-            if (result.mintedItems != 0) {
+            if (result.mintedItems !== 0) {
                 props.handleChangeCount(props.count + result.mintedItems);
                 setStatus(
                 <p className="text-white text-center fs-6 py-3 m-0">

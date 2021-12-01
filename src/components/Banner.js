@@ -16,7 +16,7 @@ const Banner = (props) => {
                     <div className="col-lg-5">
                         <div className="ntf-info">
                             <h2 className="text-white"> {date} </h2>
-                            <p className="fs-4"><strong>{props.count}</strong> NTFs Minted <span className="ms-3"><strong>{10000 - props.count}</strong> NFTs available</span></p>
+                            <p className="fs-4"><strong>{props.count}</strong> NTFs Minted <span className="ms-3"><strong>{formatNumber(10000 - props.count, 0, 3)}</strong> NFTs available</span></p>
                         </div>
                     </div>
                     <div className="col-lg-6 offset-xl-1">

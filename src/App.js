@@ -22,20 +22,10 @@ import './App.scss';
 function App() {
 
   const [isLoaded, setIsLoaded] = useState(false);
-  const [countnft, setCountnft] = useState(0);
 
   const [image, setImage] = useState("./story/story1.jpg");
 
-  const [count, setCount] = useState(0);
-
-  useEffect(async () => {
-      const count = await getMintedTotal();
-      setCount(count);
-  }, []);
-
-  function handleChangeCount (count) {
-    setCount(count);
-  }
+  const [count, setCount] = useState(0);  
 
   const images = [
     "./story/story1.jpg",
@@ -65,11 +55,17 @@ function App() {
     }
   }
 
-  const handleNftChange = (count) => {
-    setCountnft(countnft + count);
+  function handleChangeCount (count) {
+    setCount(count);
   }
 
   useEffect(() => {
+    async function fetchCount() {
+      const count = await getMintedTotal();
+      setCount(count);
+    }
+    fetchCount();
+  
     const interval = setInterval(() => {
       changeImage()
     }, 500);
@@ -87,7 +83,7 @@ function App() {
         isLoaded? 
         <div className="App">          
 
-          <StatusBar countnft={countnft} />
+          <StatusBar />
 
           <Header />
 
