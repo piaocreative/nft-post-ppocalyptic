@@ -67,6 +67,7 @@ button {
         color: #ffffff;
         font-size: 21px;
         border: none;
+        border-radius: 0;
         background-image: repeating-linear-gradient(180deg, #FEA715, #FA7D00 100%);
         white-space: nowrap;
     }
@@ -307,6 +308,17 @@ button {
 //community//
 .community {
     padding: 7rem 0;
+    
+    .btn {
+        font-family: 'Luckiest Guy', cursive;
+        padding: 20px 68px;
+        color: #ffffff;
+        font-size: 21px;
+        border: none;
+        border-radius: 0;
+        background-image: repeating-linear-gradient(180deg, #FEA715, #FA7D00 100%);
+        white-space: nowrap;
+    }
 
     img {
         @include media-breakpoint-down(lg) {
