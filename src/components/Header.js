@@ -61,18 +61,28 @@ const Header = () => {
             <header>
                 <div className="container">
                     <nav className="navbar navbar-expand-lg">
-                        <div className="navbar-brand">
+                        <div className="navbar-brand me-auto">
                             <Link to="/">
                                 <img src="./logo.png" alt="Logo"/>
                             </Link>
                         </div>
 
+                        <button id="walletButton" className="order-lg-1" onClick={connectWalletPressed}>
+                            {walletAddress.length > 0 ? (
+                            "Connected: " +
+                            String(walletAddress).substring(0, 6) +
+                            "..." +
+                            String(walletAddress).substring(38)
+                            ) : (
+                            <span>Connect Wallet</span>
+                            )}
+                        </button>
+
                         <button className="navbar-toggler btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
                             <FontAwesomeIcon className="text-white" icon={faBars} />
                         </button>
 
-                        <div className="collapse navbar-collapse justify-content-end" id="navBar">
-
+                        <div className="collapse navbar-collapse justify-content-end order-lg-0" id="navBar">
                             <div className="navbar-nav">
                                 <Link to="gallery" spy={true} smooth={true} className="nav-link">
                                     Gallery
@@ -82,28 +92,15 @@ const Header = () => {
                                     Story
                                 </Link>
 
-                                <Link to="roadmap"  spy={true} smooth={true} className="nav-link">
+                                <Link to="roadmap" spy={true} smooth={true} className="nav-link">
                                     Roadmap 
                                 </Link>
 
                                 <Link to="team" spy={true} smooth={true} className="nav-link">
                                     Team
-                                </Link> 
-
+                                </Link>
                             </div>
-
-                            <button id="walletButton" onClick={connectWalletPressed}>
-                                {walletAddress.length > 0 ? (
-                                "Connected: " +
-                                String(walletAddress).substring(0, 6) +
-                                "..." +
-                                String(walletAddress).substring(38)
-                                ) : (
-                                <span>Connect Wallet</span>
-                                )}
-                            </button>
-
-                        </div>
+                        </div>                        
                     </nav>
                 </div>
             </header>

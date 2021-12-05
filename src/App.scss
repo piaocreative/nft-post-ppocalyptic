@@ -26,31 +26,47 @@ header {
         text-overflow: ellipsis;
         overflow: hidden;
     }
-}
 
-.navbar-nav {
-    .nav-link {
-        font-size: 16px;
-        font-weight: 500;
-        color: #ffffff;
-        padding-left: 25px !important;
-        padding-right: 25px !important;
-        cursor: pointer;
+    .navbar-expand-lg {
+        .navbar-nav {            
+            .nav-link {
+                font-size: 1rem;
+                font-weight: 500;
+                color: #ffffff;
+                padding-left: 1.5625rem;
+                padding-right: 1.5625rem;
+                cursor: pointer;
+            }
+
+            @include media-breakpoint-down(lg) {
+                background-image: repeating-linear-gradient(180deg, #FEA715, #FA7D00 100%);
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+        }
+    }
+    
+    .navbar-toggler {
+        padding: 0.75rem 1.5rem;
+        width: auto;
+        margin-left: 1rem;
+    }
+    
+    .navbar-brand {
+        img {
+            height: 5.125rem;
+        }
     }
 }
 
-.navbar-brand {
-    img {
-        height: 82px;
-    }
-}
-
-button {
+button,
+.btn {
     font-family: 'Luckiest Guy', cursive;
-    padding: 20px 68px;
+    padding: 1.25rem 4.25rem;
     color: #ffffff;
-    font-size: 21px;
+    font-size: 1.3125rem;
     border: none;
+    border-radius: 0;
     background-image: repeating-linear-gradient(180deg, #FEA715, #FA7D00 100%);
     white-space: nowrap;
 }
@@ -68,17 +84,6 @@ button {
     background-repeat: no-repeat;
     background-position: center;
 
-    .btn {
-        font-family: 'Luckiest Guy', cursive;
-        padding: 20px 68px;
-        color: #ffffff;
-        font-size: 21px;
-        border: none;
-        border-radius: 0;
-        background-image: repeating-linear-gradient(180deg, #FEA715, #FA7D00 100%);
-        white-space: nowrap;
-    }
-
     &:after {
         content: "";
         position: absolute;
@@ -90,23 +95,17 @@ button {
 
     .title {
         color: #ffffff;
-        margin-bottom: 12.25rem !important;
+        margin-bottom: 12.25rem;
 
         @include media-breakpoint-down(lg) {
-            margin-bottom: 2.25rem !important;
+            font-size: 5.625rem;
+            margin-bottom: 2.25rem;
         }
 
-        @include media-breakpoint-down(md) {
-            font-size: 90px;
+        @include media-breakpoint-down(md) {            
             text-align: left;
         }
-    }
-
-    .sub-title {
-        @include media-breakpoint-up(lg) {
-            margin-right: 16rem;
-        } 
-    }
+    }    
     
     .social-link {
         li {
@@ -115,7 +114,7 @@ button {
             a {
                 display: flex;
                 align-items: center;
-                font-size: 18px;
+                font-size: 1.125rem;
                 font-family: 'Luckiest Guy', cursive;
                 color: #ffffff;
 
@@ -165,57 +164,52 @@ button {
             padding-bottom: 1rem;
             border-bottom: 1px dotted #ffffff;
             
-            @include media-breakpoint-up(lg) {
-                margin-bottom: 7rem !important;
+            @include media-breakpoint-up(xl) {
+                margin-bottom: 7rem;
             }
         }
 
         p {
             padding: 1rem 0;
-            font-size: 30px;
+            font-size: 1.875rem;
         }
     }
 
     @include media-breakpoint-down(lg) {
-        padding: 5.875rem 0;
-
-        .banner-thumbnail {
-            top: -13rem;
-        }
+        padding: 12.5rem 0;
     }
 
     @include media-breakpoint-down(sm) {
         .sub-title {
-            font-size: 40px !important;
+            font-size: 2.5rem;
         }
 
         .title {
-            font-size: 72px !important;
+            font-size: 4.5rem;
         }
     }
-}
 
-.divide {
-    position: absolute;
-    top: 47%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-
-    &:before {
-        content: "";
-        display: inline-block;
-        width: 51%;
-        height: 1px;
-        background-color: rgba($color: #ffffff, $alpha: 0.7);
-    }
-
-    &:after {
-        content: "";
-        display: inline-block;
-        width: 49%;
-        height: 3px;
-        background-color: #ffffff;
+    .divide {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 1.875rem 0;
+    
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 51%;
+            height: 1px;
+            background-color: rgba($color: #ffffff, $alpha: 0.7);
+        }
+    
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 49%;
+            height: 3px;
+            background-color: #ffffff;
+        }
     }
 }
 
@@ -237,31 +231,26 @@ button {
 // about//
 .about-section {
     position: relative;
-    padding: 165px 0;
+    padding: 10.3125rem 0;
+
 
     .about-bg {
         position: absolute;
-        left: 3%;
-        top: 20%;
-
-        @include media-breakpoint-down(lg) {
-            top: 1%;
-        }
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
     }
 
     .title {
         margin-bottom: 6.875rem !important;
     }
 
-    img {
-        margin-bottom: 6rem;
-    }
-
     @include media-breakpoint-down(lg) {
-        padding: 50px 0;
+        padding: 3.125rem 0;
 
         .title {
-            margin-bottom: 1.875rem !important;
+            margin-bottom: 1.875rem;
         }
     }
 }
@@ -298,12 +287,12 @@ button {
         margin-bottom: 1.875rem;
 
         img {
-            margin-bottom: 40px;
+            margin-bottom: 2.5rem;
             width: 100%;
         }
 
         h4 {
-            margin-bottom: 15px !important;
+            margin-bottom: 0.9375rem;
         }
     }
 
@@ -315,17 +304,6 @@ button {
 //community//
 .community {
     padding: 7rem 0;
-    
-    .btn {
-        font-family: 'Luckiest Guy', cursive;
-        padding: 20px 68px;
-        color: #ffffff;
-        font-size: 21px;
-        border: none;
-        border-radius: 0;
-        background-image: repeating-linear-gradient(180deg, #FEA715, #FA7D00 100%);
-        white-space: nowrap;
-    }
 
     img {
         @include media-breakpoint-down(lg) {
@@ -357,7 +335,7 @@ footer {
             margin-bottom: 1rem;
 
             a {
-                font-size: 16px;
+                font-size: 1rem;
                 font-weight: 500;
                 color: #ffffff !important;
                 cursor: pointer;
@@ -384,7 +362,7 @@ footer {
     }
 
     p {
-        font-size: 16px;
+        font-size: 1rem;
         color: #ffffff;
     }
 }
@@ -401,48 +379,47 @@ footer {
     @include media-breakpoint-down(lg) {
         display: none;
     }
-  }
+}
   
-  .timeline {
-    height: 430px;
+.timeline {
+    height: 26.875rem;
     width: 3px;
     background-color: #282B2F;
-  }
+}
   
-  .square {
+.square {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background-color: #282B2F;
-    width: 16px;
-    height: 16px;
+    width: 1rem;
+    height: 1rem;
     z-index: 1;
     transform: rotate(45deg) !important;
-  }
+}
   
-  .squareWrapper {
+.squareWrapper {
     position: relative;
     margin-bottom: -1rem;
-  }
+}
 
-  .mint-ticket {
-      padding: 5rem 3rem;
-      margin: auto;
+.mint-ticket {
+    padding: 5rem 3rem;
+    margin: auto;
 
-      input {
+    input {
         width: 3.5rem;
-        height: 3.5rem;
         font-size: 3rem;
         font-family: 'Luckiest Guy', cursive;       
-      }
+    }
 
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 
-      button {
-          padding: 0 1.5rem;
-      }
-  }
+    .change-number {
+        padding: 0 1.5rem;
+    }
+}
