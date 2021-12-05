@@ -106,8 +106,7 @@ export const Readmap = () => {
                             <h2>Golems <br />Merch</h2>
                         </div>
                         <div className="col-lg-5 offset-lg-1">
-                            <p className="mt-3 mb-0"
-                                >Ellis and his Bounty Hunters begin their journey and pass through the Zone of Desolation, which is populated by the Golems, a tribe with 2000 Armored Warriors. Ellis and his Bounty Hunters are confronted by a group of Golem Armored Warriors and a standoff ensues.
+                            <p className="mt-3 mb-0">
                                 We have special Golems Merch reserved for 20 lucky wallet owners. When 2000 NFTs are sold out, we will share 10% of mint sales to 20 lucky wallet owners.
                             </p>
                         </div>
@@ -122,7 +121,6 @@ export const Readmap = () => {
                         </div>
                         <div className="col-lg-5 offset-lg-1">
                             <p className="mt-3 mb-0">
-                                Some of the Bounty Hunters stay in Anatef while Ellis and the others go on a reconnaissance mission to spy on the protected base of the Kesseks and their 3000 Armored Warriors. The Bounty Hunters destroy one of the Kesseks' ammunition dumps and are chased.
                                 We have special Kesseks Merch reserved for 30 lucky wallet owners. When new 3000 NFTs are sold out, we will share 15% of mint sales to 30 lucky wallet owners.
                             </p>
                         </div>
@@ -137,7 +135,6 @@ export const Readmap = () => {
                         </div>
                         <div className="col-lg-5 offset-lg-1">
                             <p className="mt-3 mb-0">
-                                Ellis wakes up in the Blue Quadrant base of the Mondrils, another tribe with 5000 Armored Warriors led by none other than Gilhem. Gilhem had received knowledge of Ellis' bounty hunter gang from Andres—to help them capture Ellis for leverage against the Kesseks.
                                 We have special Mondrils Merch reserved for 50 lucky wallet owners. When new 5000 NFTs are sold out, we will share 20% of mint sales to 50 lucky wallet owners.
                             </p>
                         </div>
@@ -165,7 +162,7 @@ export const Readmap = () => {
                             <h2>Ellis and <br />Bohler's Drop</h2>
                         </div>
                         <div className="col-lg-5 offset-lg-1">
-                            <p className="mt-3 mb-0">There are special NFT products with portraits of Ellis and Bohler. When our collection is sold out, we will send Ellis's portrait and 5ETH to the best collector of Hunters. Also, we will send Bohler's portrait and 5ETH to our most active and helpful community member.</p>
+                            <p className="mt-3 mb-0">There are special NFT products. When our collection is sold out, we will send Ellis's portrait and 5ETH to the best collector of Hunters. Also, we will send Bohler's portrait and 5ETH to our most active and helpful community member.</p>
                         </div>
                     </div>
                 </div>
