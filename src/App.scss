@@ -9,6 +9,10 @@
 .statusbar {
     position: relative;
     z-index: 1;
+
+    p {
+        margin-bottom: 0;
+    }
 }
 
 // header
