@@ -91,10 +91,10 @@ export const Readmap = () => {
                     <p className="number mb-3">01</p>
                     <div className="row">
                         <div className="col-lg-6">
-                            <h2>Community Wallet</h2>
+                            <h2>Free NFTs Drop</h2>
                         </div>
                         <div className="col-lg-5 offset-lg-1">
-                            <p className="mt-3 mb-0">When our collection is sold out, we will create and start the community wallet with 10 ETH. This wallet will be used for further donations, investments and promotions as voted on by the community. We will also reward our most active and helpful community members based on our discord ranking system.</p>
+                            <p className="mt-3 mb-0">We will drop free NFTs and will transfer to 20 first buyers! Get free NFTs without gas!</p>
                         </div>
                     </div>
                 </div>
@@ -103,12 +103,10 @@ export const Readmap = () => {
                     <p className="number mb-3">02</p>
                     <div className="row">
                         <div className="col-lg-6">
-                            <h2>Golems <br />Merch</h2>
+                            <h2>Community Wallet</h2>
                         </div>
                         <div className="col-lg-5 offset-lg-1">
-                            <p className="mt-3 mb-0">
-                                We have special Golems Merch reserved for 20 lucky wallet owners. When 2000 NFTs are sold out, we will share 10% of mint sales to 20 lucky wallet owners.
-                            </p>
+                            <p className="mt-3 mb-0">When the collection is sold out, we will create and start the community wallet with 10 ETH. This wallet will be used for further donations, investments, and promotions as voted on by the community. We will also reward our most active and helpful community members based on our discord ranking system.</p>
                         </div>
                     </div>
                 </div>
@@ -117,11 +115,11 @@ export const Readmap = () => {
                     <p className="number mb-3">03</p>
                     <div className="row">
                         <div className="col-lg-6">
-                            <h2>Kesseks <br />Merch</h2>
+                            <h2>Golems <br />Merch</h2>
                         </div>
                         <div className="col-lg-5 offset-lg-1">
                             <p className="mt-3 mb-0">
-                                We have special Kesseks Merch reserved for 30 lucky wallet owners. When new 3000 NFTs are sold out, we will share 15% of mint sales to 30 lucky wallet owners.
+                                We have special Golems Merch reserved for 20 lucky wallet owners. When 2000 NFTs are sold out, will share <strong>10% OF Sales</strong> to 20 lucky wallet owners.
                             </p>
                         </div>
                     </div>
@@ -131,11 +129,11 @@ export const Readmap = () => {
                     <p className="number mb-3">04</p>
                     <div className="row">
                         <div className="col-lg-6">
-                            <h2>Mondrils <br />Merch</h2>
+                            <h2>Kesseks <br />Merch</h2>
                         </div>
                         <div className="col-lg-5 offset-lg-1">
                             <p className="mt-3 mb-0">
-                                We have special Mondrils Merch reserved for 50 lucky wallet owners. When new 5000 NFTs are sold out, we will share 20% of mint sales to 50 lucky wallet owners.
+                                We have special Kesseks Merch reserved for 30 lucky wallet owners. When new 3000 NFTs are sold out, will share <strong>15% OF Sales</strong> to 30 lucky wallet owners.
                             </p>
                         </div>
                     </div>
@@ -145,11 +143,11 @@ export const Readmap = () => {
                     <p className="number mb-3">05</p>
                     <div className="row">
                         <div className="col-lg-6">
-                            <h2>9 Hunter's <br />Drop</h2>
+                            <h2>Mondrils <br />Merch</h2>
                         </div>
                         <div className="col-lg-5 offset-lg-1">
                             <p className="mt-3 mb-0">
-                                There are special NFT products with portraits of 9 Hunters. When our collection is sold out, we will send them free to best 9 collectors of special Warriors.
+                                We have special Mondrils Merch reserved for 50 lucky wallet owners. When new 5000 NFTs are sold out, will share <strong>20% OF Sales</strong> to 50 lucky wallet owners.
                             </p>
                         </div>
                     </div>
@@ -159,10 +157,12 @@ export const Readmap = () => {
                     <p className="number mb-3">06</p>
                     <div className="row">
                         <div className="col-lg-6">
-                            <h2>Ellis and <br />Bohler's Drop</h2>
+                            <h2>9 Hunter's <br />Drop</h2>
                         </div>
                         <div className="col-lg-5 offset-lg-1">
-                            <p className="mt-3 mb-0">There are special NFT products. When our collection is sold out, we will send Ellis's portrait and 5ETH to the best collector of Hunters. Also, we will send Bohler's portrait and 5ETH to our most active and helpful community member.</p>
+                            <p className="mt-3 mb-0">
+                                There are special NFTs ready with portraits of 9 Hunters. When the collection is sold out, will send them to the best 9 collectors of special Warriors.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -171,10 +171,26 @@ export const Readmap = () => {
                     <p className="number mb-3">07</p>
                     <div className="row">
                         <div className="col-lg-6">
+                            <h2>Ellis and <br />Bohler's Drop</h2>
+                        </div>
+                        <div className="col-lg-5 offset-lg-1">
+                            <p className="mt-3 mb-0">
+                                There are special NFTs ready. When the collection is sold out, will send <strong>Ellis's Portrait</strong> and <strong>5ETH</strong> to the best collector of Hunters. Also, we will send <strong>Bohler's Portrait</strong> and <strong>5ETH</strong> to our most active and helpful community member.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="story">
+                    <p className="number mb-3">08</p>
+                    <div className="row">
+                        <div className="col-lg-6">
                             <h2>Blockchain<br />Game</h2>
                         </div>
                         <div className="col-lg-5 offset-lg-1">
-                            <p className="mt-3 mb-0">We are plaining to publish the blockchain game, that only NFT owners can join. Coming Soon!</p>
+                            <p className="mt-3 mb-0">
+                                We are planning to publish the <strong>Blockchain Game</strong>, that only NFT owners can join. And will create the community for the game and will go with you all.
+                            </p>
                         </div>
                     </div>
                 </div>
